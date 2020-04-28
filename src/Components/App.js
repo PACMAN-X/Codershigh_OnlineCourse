@@ -1,11 +1,11 @@
 import React from "react";
-import Home from "./Home";
+import Router from "Components/Router";
 import GlobalStyles from "./GlobalStyles";
 
 function App() {
   return (
     <>
-      <Home></Home>
+      <Router></Router>
       <GlobalStyles></GlobalStyles>
     </>
   );

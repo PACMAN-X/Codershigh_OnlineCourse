@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.js": "/Codershigh_OnlineCourse/static/js/main.cb75b699.chunk.js",
+    "main.js.map": "/Codershigh_OnlineCourse/static/js/main.cb75b699.chunk.js.map",
+    "runtime-main.js": "/Codershigh_OnlineCourse/static/js/runtime-main.15b67e74.js",
+    "runtime-main.js.map": "/Codershigh_OnlineCourse/static/js/runtime-main.15b67e74.js.map",
+    "static/js/2.9bcfc46b.chunk.js": "/Codershigh_OnlineCourse/static/js/2.9bcfc46b.chunk.js",
+    "static/js/2.9bcfc46b.chunk.js.map": "/Codershigh_OnlineCourse/static/js/2.9bcfc46b.chunk.js.map",
+    "index.html": "/Codershigh_OnlineCourse/index.html",
+    "precache-manifest.a6bd7a460c28d93be2626deb214afe64.js": "/Codershigh_OnlineCourse/precache-manifest.a6bd7a460c28d93be2626deb214afe64.js",
+    "service-worker.js": "/Codershigh_OnlineCourse/service-worker.js",
+    "static/js/2.9bcfc46b.chunk.js.LICENSE.txt": "/Codershigh_OnlineCourse/static/js/2.9bcfc46b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.15b67e74.js",
+    "static/js/2.9bcfc46b.chunk.js",
+    "static/js/main.cb75b699.chunk.js"
+  ]
+}
