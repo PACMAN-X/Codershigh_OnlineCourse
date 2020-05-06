@@ -1,12 +1,13 @@
 import React from "react";
 import DevPresenter from "./DevPresenter";
 
-export default class extends React.Component {
-  state = {
-    error: null,
-    loading: false,
-    show: false,
-  };
+export default class DevContainer extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      
+    };
+  }
 
   render() {
     return <DevPresenter />;

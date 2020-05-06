@@ -1,14 +1,15 @@
 import React from "react";
-import UXContainer from "./UXContainer";
+import UXPresenter from "./UXPresenter";
 
-export default class extends React.Component {
-  state = {
-    error: null,
-    loading: false,
-    show: false,
-  };
+export default class UXContainer extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      
+    };
+  }
 
   render() {
-    return <UXContainer />;
+    return <UXPresenter />;
   }
 }

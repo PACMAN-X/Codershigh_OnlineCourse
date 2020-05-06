@@ -55,6 +55,8 @@ const AvatarDescription = styled.span`
   font-size: 16px;
   font-weight: 900;
   color: #000000;
+  padding-left: 23px;
+  padding-right: 23px;
 `;
 
 const AvatarInfo = styled.span`
@@ -63,6 +65,8 @@ const AvatarInfo = styled.span`
   font-weight: 500;
   color: #000000;
   margin-top: 10px;
+  padding-left: 23px;
+  padding-right: 23px;
 `;
 
 const DescriptionContentBlock_1 = () => (
