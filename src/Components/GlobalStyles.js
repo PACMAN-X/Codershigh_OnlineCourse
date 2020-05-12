@@ -1,6 +1,6 @@
-import { createGlobalStyle } from "styled-components";
-import reset from "styled-reset";
-import font from "../Assets/Fonts/Fonts.css"
+import { createGlobalStyle } from 'styled-components';
+import reset from 'styled-reset';
+import font from '../Assets/Fonts/Fonts.css';
 
 const globalStyles = createGlobalStyle`
     ${font};
@@ -21,8 +21,6 @@ const globalStyles = createGlobalStyle`
         color:white;
         font-size: 12px;
     }
-   
-    
 `;
 
 export default globalStyles;

@@ -1,6 +1,6 @@
-import React from "react";
-import { Link, withRouter } from "react-router-dom";
-import styled from "styled-components";
+import React from 'react';
+import { Link, withRouter } from 'react-router-dom';
+import styled from 'styled-components';
 
 const Navbar = styled.header``;
 
@@ -18,7 +18,7 @@ const Slink = styled(Link)`
 export default withRouter(({ location: { pathname } }) => (
   <Navbar>
     <List>
-      <Item current={pathname === "/"}>
+      <Item current={pathname === '/'}>
         <Slink></Slink>
       </Item>
       <Item>
