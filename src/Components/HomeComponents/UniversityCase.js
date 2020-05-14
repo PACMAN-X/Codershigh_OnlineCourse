@@ -26,7 +26,8 @@ const UniversityCase = () => {
 
   const handleShow = () => {
     if (hidden == true) {
-    }
+
+    } else 
   };
 
   return (
