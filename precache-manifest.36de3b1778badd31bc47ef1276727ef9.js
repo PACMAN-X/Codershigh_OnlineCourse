@@ -1,27 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d526632b309864951d60658b95aba61e",
+    "revision": "b7ddf37f5f0bb58a1f7f33b931876248",
     "url": "/Codershigh_OnlineCourse/index.html"
   },
   {
-    "revision": "7fe4b4b164e04d9998dc",
+    "revision": "f19c5fc2e67ef8817071",
     "url": "/Codershigh_OnlineCourse/static/css/main.38554d0a.chunk.css"
   },
   {
-    "revision": "c55475c170c635ea0935",
-    "url": "/Codershigh_OnlineCourse/static/js/2.2a63cceb.chunk.js"
+    "revision": "809259355a42326af0af",
+    "url": "/Codershigh_OnlineCourse/static/js/2.8f1e07b9.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/Codershigh_OnlineCourse/static/js/2.2a63cceb.chunk.js.LICENSE.txt"
+    "url": "/Codershigh_OnlineCourse/static/js/2.8f1e07b9.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "7fe4b4b164e04d9998dc",
-    "url": "/Codershigh_OnlineCourse/static/js/main.45d83248.chunk.js"
+    "revision": "f19c5fc2e67ef8817071",
+    "url": "/Codershigh_OnlineCourse/static/js/main.cb1dcf33.chunk.js"
   },
   {
     "revision": "dbc524b17a31a89c2e2f",
     "url": "/Codershigh_OnlineCourse/static/js/runtime-main.15b67e74.js"
+  },
+  {
+    "revision": "9177d048860ad3b846f0bb526150430c",
+    "url": "/Codershigh_OnlineCourse/static/media/13.9177d048.jpg"
   },
   {
     "revision": "99aa425218690853deb26c18dddf24ee",
@@ -80,6 +84,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Codershigh_OnlineCourse/static/media/HYU_Case_2.8698234e.jpg"
   },
   {
+    "revision": "b84ec48761e30b89848e669d1f2e2b37",
+    "url": "/Codershigh_OnlineCourse/static/media/ap.b84ec487.png"
+  },
+  {
+    "revision": "b86089b10e003ff209776b2c4dd6289e",
+    "url": "/Codershigh_OnlineCourse/static/media/girl&boy.b86089b1.png"
+  },
+  {
     "revision": "7f4116c411b2c84db8111ff726bd0da7",
     "url": "/Codershigh_OnlineCourse/static/media/group29.7f4116c4.png"
   },
@@ -96,8 +108,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Codershigh_OnlineCourse/static/media/mac.b9599fa3.jpg"
   },
   {
-    "revision": "b15827fa3c37f1a73285954f788ac83e",
-    "url": "/Codershigh_OnlineCourse/static/media/mustacheMan.b15827fa.png"
+    "revision": "b88035736b0c0d89b3d2d40b558b27e7",
+    "url": "/Codershigh_OnlineCourse/static/media/mustacheMan.b8803573.png"
   },
   {
     "revision": "e487326e906012460fe905c156e5778c",
