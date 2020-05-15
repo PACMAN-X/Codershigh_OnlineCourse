@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Codershigh_OnlineCourse/static/css/main.38554d0a.chunk.css",
-    "main.js": "/Codershigh_OnlineCourse/static/js/main.cb1dcf33.chunk.js",
-    "main.js.map": "/Codershigh_OnlineCourse/static/js/main.cb1dcf33.chunk.js.map",
+    "main.js": "/Codershigh_OnlineCourse/static/js/main.0b6a0b27.chunk.js",
+    "main.js.map": "/Codershigh_OnlineCourse/static/js/main.0b6a0b27.chunk.js.map",
     "runtime-main.js": "/Codershigh_OnlineCourse/static/js/runtime-main.15b67e74.js",
     "runtime-main.js.map": "/Codershigh_OnlineCourse/static/js/runtime-main.15b67e74.js.map",
     "static/js/2.8f1e07b9.chunk.js": "/Codershigh_OnlineCourse/static/js/2.8f1e07b9.chunk.js",
     "static/js/2.8f1e07b9.chunk.js.map": "/Codershigh_OnlineCourse/static/js/2.8f1e07b9.chunk.js.map",
     "index.html": "/Codershigh_OnlineCourse/index.html",
-    "precache-manifest.36de3b1778badd31bc47ef1276727ef9.js": "/Codershigh_OnlineCourse/precache-manifest.36de3b1778badd31bc47ef1276727ef9.js",
+    "precache-manifest.3a190ba81320bd69985f1ae77dd5db3f.js": "/Codershigh_OnlineCourse/precache-manifest.3a190ba81320bd69985f1ae77dd5db3f.js",
     "service-worker.js": "/Codershigh_OnlineCourse/service-worker.js",
     "static/css/main.38554d0a.chunk.css.map": "/Codershigh_OnlineCourse/static/css/main.38554d0a.chunk.css.map",
     "static/js/2.8f1e07b9.chunk.js.LICENSE.txt": "/Codershigh_OnlineCourse/static/js/2.8f1e07b9.chunk.js.LICENSE.txt",
@@ -26,10 +26,10 @@
     "static/media/humanBg.jpg": "/Codershigh_OnlineCourse/static/media/humanBg.88382b2d.jpg",
     "static/media/mac.jpg": "/Codershigh_OnlineCourse/static/media/mac.b9599fa3.jpg",
     "static/media/mustacheMan.png": "/Codershigh_OnlineCourse/static/media/mustacheMan.b8803573.png",
-    "static/media/newDataServicesUoQyr28HS0Unsplash.png": "/Codershigh_OnlineCourse/static/media/newDataServicesUoQyr28HS0Unsplash.e487326e.png",
     "static/media/news1.jpg": "/Codershigh_OnlineCourse/static/media/news1.018c8305.jpg",
     "static/media/news2.jpg": "/Codershigh_OnlineCourse/static/media/news2.6faf1c66.jpg",
     "static/media/news3.jpg": "/Codershigh_OnlineCourse/static/media/news3.2a83b2af.jpg",
+    "static/media/twomen.jpg": "/Codershigh_OnlineCourse/static/media/twomen.ad7dad85.jpg",
     "static/media/고려대.png": "/Codershigh_OnlineCourse/static/media/고려대.fee02e31.png",
     "static/media/광운대.png": "/Codershigh_OnlineCourse/static/media/광운대.14b8a95c.png",
     "static/media/서강대.png": "/Codershigh_OnlineCourse/static/media/서강대.2a72f9e2.png",
@@ -42,6 +42,6 @@
     "static/js/runtime-main.15b67e74.js",
     "static/js/2.8f1e07b9.chunk.js",
     "static/css/main.38554d0a.chunk.css",
-    "static/js/main.cb1dcf33.chunk.js"
+    "static/js/main.0b6a0b27.chunk.js"
   ]
 }

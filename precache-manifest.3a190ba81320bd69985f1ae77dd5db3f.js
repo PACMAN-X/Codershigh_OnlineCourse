@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b7ddf37f5f0bb58a1f7f33b931876248",
+    "revision": "389feb7ef3bb0b008fb7a8b47dd30920",
     "url": "/Codershigh_OnlineCourse/index.html"
   },
   {
-    "revision": "f19c5fc2e67ef8817071",
+    "revision": "13e3addc79fddb1b255a",
     "url": "/Codershigh_OnlineCourse/static/css/main.38554d0a.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Codershigh_OnlineCourse/static/js/2.8f1e07b9.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f19c5fc2e67ef8817071",
-    "url": "/Codershigh_OnlineCourse/static/js/main.cb1dcf33.chunk.js"
+    "revision": "13e3addc79fddb1b255a",
+    "url": "/Codershigh_OnlineCourse/static/js/main.0b6a0b27.chunk.js"
   },
   {
     "revision": "dbc524b17a31a89c2e2f",
@@ -112,10 +112,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Codershigh_OnlineCourse/static/media/mustacheMan.b8803573.png"
   },
   {
-    "revision": "e487326e906012460fe905c156e5778c",
-    "url": "/Codershigh_OnlineCourse/static/media/newDataServicesUoQyr28HS0Unsplash.e487326e.png"
-  },
-  {
     "revision": "018c83058167ce1999dfc41957ae4378",
     "url": "/Codershigh_OnlineCourse/static/media/news1.018c8305.jpg"
   },
@@ -126,6 +122,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "2a83b2af376434aa0bfdffb89cf629f7",
     "url": "/Codershigh_OnlineCourse/static/media/news3.2a83b2af.jpg"
+  },
+  {
+    "revision": "ad7dad85fdd35e8d6f9095c34089cb2f",
+    "url": "/Codershigh_OnlineCourse/static/media/twomen.ad7dad85.jpg"
   },
   {
     "revision": "fee02e31c88d2615a7af0b11615b56c8",
