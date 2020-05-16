@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8c5efc220d1924d8211ddf50e26ee980",
+    "revision": "51ba49fc3255e674dfcae7a6760ce7be",
     "url": "/Codershigh_OnlineCourse/index.html"
   },
   {
-    "revision": "50b0666765d7ea6e1ff1",
-    "url": "/Codershigh_OnlineCourse/static/css/main.38554d0a.chunk.css"
+    "revision": "ab5638d850a47f39ec5d",
+    "url": "/Codershigh_OnlineCourse/static/css/main.40674c87.chunk.css"
   },
   {
-    "revision": "fccb6b120760f5bfa717",
-    "url": "/Codershigh_OnlineCourse/static/js/2.2b3fb0b5.chunk.js"
+    "revision": "d210b137ed01fb243a9a",
+    "url": "/Codershigh_OnlineCourse/static/js/2.4e626cc8.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/Codershigh_OnlineCourse/static/js/2.2b3fb0b5.chunk.js.LICENSE.txt"
+    "url": "/Codershigh_OnlineCourse/static/js/2.4e626cc8.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "50b0666765d7ea6e1ff1",
-    "url": "/Codershigh_OnlineCourse/static/js/main.993e72ba.chunk.js"
+    "revision": "ab5638d850a47f39ec5d",
+    "url": "/Codershigh_OnlineCourse/static/js/main.2ae82897.chunk.js"
   },
   {
     "revision": "dbc524b17a31a89c2e2f",
@@ -88,6 +88,22 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Codershigh_OnlineCourse/static/media/ap.b84ec487.png"
   },
   {
+    "revision": "31211bc5f2e64eaf6f99f1ab0701cd97",
+    "url": "/Codershigh_OnlineCourse/static/media/app1.31211bc5.jpg"
+  },
+  {
+    "revision": "399ab88e3f1570539cdf2af6e002d2f2",
+    "url": "/Codershigh_OnlineCourse/static/media/app2.399ab88e.jpg"
+  },
+  {
+    "revision": "8b1dfcd068b6c89bf76f7cf2bad1a161",
+    "url": "/Codershigh_OnlineCourse/static/media/app3.8b1dfcd0.jpg"
+  },
+  {
+    "revision": "170a8acbdab97a6510ecfed92f7484d2",
+    "url": "/Codershigh_OnlineCourse/static/media/app4.170a8acb.jpg"
+  },
+  {
     "revision": "b86089b10e003ff209776b2c4dd6289e",
     "url": "/Codershigh_OnlineCourse/static/media/girl&boy.b86089b1.png"
   },
@@ -126,6 +142,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "ad7dad85fdd35e8d6f9095c34089cb2f",
     "url": "/Codershigh_OnlineCourse/static/media/twomen.ad7dad85.jpg"
+  },
+  {
+    "revision": "96a90e205e15bf8e88b723221f526227",
+    "url": "/Codershigh_OnlineCourse/static/media/ux1.96a90e20.jpg"
+  },
+  {
+    "revision": "1c924a33cba71e9ec1a35693fc91127c",
+    "url": "/Codershigh_OnlineCourse/static/media/ux2.1c924a33.jpg"
   },
   {
     "revision": "fee02e31c88d2615a7af0b11615b56c8",
