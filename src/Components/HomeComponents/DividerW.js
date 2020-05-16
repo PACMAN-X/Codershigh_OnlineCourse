@@ -41,9 +41,7 @@ const DividerW = () => (
         실시간 원격 코스입니다
       </DividerWBlockColumn>
     </DividerWBlock>
-    <BottomImage
-      src={require('../../Assets/Images/twoMen/newDataServicesUoQyr28HS0Unsplash.png')}
-    ></BottomImage>
+    <BottomImage src={require('../../Assets/Images/twomen.jpg')}></BottomImage>
   </>
 );
 

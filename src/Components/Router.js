@@ -1,16 +1,14 @@
-import React from "react";
-import { HashRouter as Router, Route, Switch } from "react-router-dom";
-import Home from "Routes/Home";
-import Dev from "Routes/Dev";
-import UX from "Routes/UX";
+import React from 'react';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
+import Home from '../Routes/Home/index.js';
+import Curriculum from '../Routes/Curriculum/index.js';
 
 export default () => (
   <Router>
     <>
       <Switch>
         <Route path="/" exact component={Home} />
-        <Route path="/Dev" exact component={Dev} />
-        <Route path="/UX" exact component={UX} />
+        <Route path="/curriculum" exact component={Curriculum} />
       </Switch>
     </>
   </Router>

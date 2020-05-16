@@ -58,7 +58,7 @@ const BlockCardNewsInfo = styled.div`
   background-color: #273949;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   transform: translate(0, 100%);
   transition: all 0.2s linear;
 `;
@@ -79,6 +79,9 @@ const CardNewsColumn = styled.div`
   height: 50px;
   width: 100%;
   padding: 12px 10px 10px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const CardNewsInfo = styled.div`

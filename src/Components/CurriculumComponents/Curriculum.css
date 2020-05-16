@@ -1,0 +1,14 @@
+.btn {
+    border: none;
+    outline: none;
+    padding: 10px 16px;
+    background-color: transparent;
+    color: #007bec;
+    cursor: pointer;
+    font-size: 18px;
+}
+.active, .btn:hover {
+    background-color: #007bec;
+    color: white;
+}
+

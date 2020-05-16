@@ -89,46 +89,16 @@ const HomeContainer = () => {
   // ];
 
   const universities = [
-    {
-      name: '고려대',
-      url: '../../Assets/Images/clients/universities/korea.png',
-    },
-    {
-      name: '광운대',
-      url: '../../Assets/Images/clients/universities/korea.png',
-    },
-    {
-      name: '동국대',
-      url: '../../Assets/Images/clients/universities/korea.png',
-    },
-    {
-      name: '서강대',
-      url: '../../Assets/Images/clients/universities/korea.png',
-    },
-    {
-      name: '서울대',
-      url: '../../Assets/Images/clients/universities/korea.png',
-    },
-    {
-      name: '서울여대',
-      url: '../../Assets/Images/clients/universities/korea.png',
-    },
-    {
-      name: '숙명여대',
-      url: '../../Assets/Images/clients/universities/korea.png',
-    },
-    {
-      name: '연세대',
-      url: '../../Assets/Images/clients/universities/korea.png',
-    },
-    {
-      name: '중앙대',
-      url: '../../Assets/Images/clients/universities/korea.png',
-    },
-    {
-      name: '한양대',
-      url: '../../Assets/Images/clients/universities/korea.png',
-    },
+    '고려대',
+    '광운대',
+    '동국대',
+    '서강대',
+    '서울대',
+    '서울여대',
+    '숙명여대',
+    '연세대',
+    '중앙대',
+    '한양대',
   ];
 
   return (

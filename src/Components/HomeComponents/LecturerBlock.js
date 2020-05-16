@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import CAUCase from './CAUCase';
+import HYUCase from './HYUCase';
 
 const Container = styled.div`
   width: 100%;
@@ -43,7 +45,7 @@ const HalfBackground = styled.span`
   background: linear-gradient(to top, #47dbd9 50%, transparent 50%);
 `;
 
-const IntroductionTutor = styled.div``;
+// const IntroductionTutor = styled.div``;
 
 const IntroTitle = styled.div`
   font-size: 25px;
@@ -53,58 +55,116 @@ const IntroTitle = styled.div`
 `;
 
 const UniversityCardContainer = styled.div`
-  width: 20%;
-  height: 20%;
+  width: 50%;
+  height: 50%;
+  display: grid;
+  margin-top: 50px;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 20px;
+`;
+
+const UniversityCard = styled.div`
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
 `;
 
-const UniversityCard = styled.div``;
+const UniversityImg = styled.img`
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+`;
 
-const UniversityImg = styled.img``;
+const UniversityName = styled.div`
+  margin-top: 10px;
+  color: #333333;
+`;
 
-const UniversityName = styled.div``;
+const UniversityDetailContainer = styled.div`
+  width: 50%;
+  margin-top: 80px;
+  margin-bottom: 150px;
+  display: flex;
+  justify-content: space-around;
+`;
 
-const LecturerBlock = ({ universities }) => (
-  <Container>
-    <CourseHeader>코더스하이의 강점</CourseHeader>
-    <MainTitle>
-      애플이 선정하고
-      <br />
-      유명 대학들이 선택한
-      <br /> APP 개발 코스
-    </MainTitle>
-    <Description>
-      코더스하이의 앱 개발 코스는
-      <br /> <HalfBackground>애플이 선정한 교수진</HalfBackground>이 개발하고
-      <br /> <HalfBackground>서울시 내 10여개 대학들</HalfBackground>이 경쟁력
-      강화를 위해
-      <br /> 선택한 앱 개발 특강입니다
-    </Description>
-    <IntroductionTutor>
+const UniversityDetailColumn = styled.div``;
+
+const UniversityDetailButton = styled.button`
+  font-size: 15px;
+  margin: 20px;
+  font-size: 18px;
+  text-decoration: underline;
+  padding: 0;
+  border: none;
+  background: none;
+`;
+
+const LecturerBlock = ({ universities }) => {
+  const [showCase, setShowCase] = useState(true);
+
+  return (
+    <Container>
+      <CourseHeader>코더스하이의 강점</CourseHeader>
+      <MainTitle>
+        애플이 선정하고
+        <br />
+        유명 대학들이 선택한
+        <br /> APP 개발 코스
+      </MainTitle>
+      <Description>
+        코더스하이의 앱 개발 코스는
+        <br /> <HalfBackground>애플이 선정한 교수진</HalfBackground>이 개발하고
+        <br /> <HalfBackground>서울시 내 10여개 대학들</HalfBackground>이 경쟁력
+        강화를 위해
+        <br /> 선택한 앱 개발 특강입니다
+      </Description>
+      {/* <IntroductionTutor>
       <IntroTitle>코더스하이 튜터를 소개합니다</IntroTitle>
-    </IntroductionTutor>
-    <UniversityCardContainer>
+    </IntroductionTutor> */}
       <IntroTitle>
         이미 많은 대학들이 <br />
         코더스하이와 함께 했습니다
       </IntroTitle>
-      {universities.map((university) => {
-        const Block = (
-          <UniversityCard>
-            <UniversityImg></UniversityImg>
-            <UniversityName>{university.name}</UniversityName>
-          </UniversityCard>
-        );
-        return Block;
-      })}
-    </UniversityCardContainer>
-  </Container>
-);
+      <UniversityCardContainer>
+        {universities.map((university) => {
+          const Block = (
+            <UniversityCard key={university}>
+              <UniversityImg
+                src={require(`../../Assets/Images/clients/universities/${university}.png`)}
+              />
+              <UniversityName>{university}</UniversityName>
+            </UniversityCard>
+          );
+          return Block;
+        })}
+      </UniversityCardContainer>
+      <UniversityDetailContainer>
+        <UniversityDetailColumn>
+          <UniversityDetailButton
+            onClick={() => setShowCase(!showCase)}
+            disabled={showCase}
+          >
+            중앙대학교 사례 보기 ▼
+          </UniversityDetailButton>
+        </UniversityDetailColumn>
+        <UniversityDetailColumn>
+          <UniversityDetailButton
+            onClick={() => setShowCase(!showCase)}
+            disabled={!showCase}
+          >
+            한양대학교 사례 보기 ▼
+          </UniversityDetailButton>
+        </UniversityDetailColumn>
+      </UniversityDetailContainer>
+      {showCase && <CAUCase></CAUCase>}
+      {!showCase && <HYUCase></HYUCase>}
+    </Container>
+  );
+};
 
 LecturerBlock.propTypes = {
-  universities: PropTypes.array,
+  universities: PropTypes.array
 };
 
 export default LecturerBlock;

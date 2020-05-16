@@ -12,9 +12,17 @@ const globalStyles = createGlobalStyle`
     *{
         box-sizing:border-box;
     }
-    html, body {
+    @media (max-width: 1024px) {
+        html, body {
+        height: 1024px;
+        width: 768px;
+    }
+    }
+    @media (min-width: 1920px) {
+        html, body {
         height: 100%;
         width: 100%;
+    }
     }
     body{
         font-family:-apple-system, 'BlinkMacSystemFont', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;

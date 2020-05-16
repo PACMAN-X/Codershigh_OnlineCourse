@@ -1,3 +1,3 @@
-import DevContainer from "./DevContainer";
+import DevContainer from './DevContainer';
 
 export default DevContainer;

@@ -1,3 +1,3 @@
 export default {
-  cBlue: '007bec',
+  cBlue: '007bec'
 };

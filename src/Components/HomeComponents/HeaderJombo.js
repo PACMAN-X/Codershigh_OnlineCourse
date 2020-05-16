@@ -63,16 +63,6 @@ const SmallTitleContainer = styled.div`
   margin-top: -50px;
 `;
 
-const SmallTitleColumn = styled.div`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: flex-end;
-  &:nth-child(1) {
-    width: 50%;
-  }
-`;
-
 const SmallTitle = styled.div`
   width: 100%;
   height: 100%;
@@ -176,14 +166,7 @@ const HeaderJombo = () => (
     </DescriptionContainer>
     <TitleContainer>
       <SmallTitleContainer>
-        <SmallTitleColumn>
-          <CodershighLogo
-            src={require('../../Assets/Logo/w_logo_simple.png')}
-          />
-        </SmallTitleColumn>
-        <SmallTitleColumn>
-          <SmallTitle>코더스하이</SmallTitle>
-        </SmallTitleColumn>
+        <CodershighLogo src={require('../../Assets/Images/codershigh.png')} />
       </SmallTitleContainer>
       <MainTitle>실시간 원격 코스 출시</MainTitle>
     </TitleContainer>
