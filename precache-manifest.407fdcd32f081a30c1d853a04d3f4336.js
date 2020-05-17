@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "42d2c513a75dce9db6a68c1ae57c18da",
+    "revision": "32bd6fe9f3f3c36e733299ad69bc644c",
     "url": "/Codershigh_OnlineCourse/index.html"
   },
   {
-    "revision": "86617aca0e4d28079d41",
-    "url": "/Codershigh_OnlineCourse/static/css/main.40674c87.chunk.css"
+    "revision": "39cdbaa9f750f1e1262f",
+    "url": "/Codershigh_OnlineCourse/static/css/main.d5afd566.chunk.css"
   },
   {
     "revision": "d210b137ed01fb243a9a",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Codershigh_OnlineCourse/static/js/2.4e626cc8.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "86617aca0e4d28079d41",
+    "revision": "39cdbaa9f750f1e1262f",
     "url": "/Codershigh_OnlineCourse/static/js/main.4761f854.chunk.js"
   },
   {
