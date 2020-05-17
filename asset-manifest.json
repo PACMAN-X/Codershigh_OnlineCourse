@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Codershigh_OnlineCourse/static/css/main.d5afd566.chunk.css",
-    "main.js": "/Codershigh_OnlineCourse/static/js/main.4761f854.chunk.js",
-    "main.js.map": "/Codershigh_OnlineCourse/static/js/main.4761f854.chunk.js.map",
+    "main.js": "/Codershigh_OnlineCourse/static/js/main.de06445e.chunk.js",
+    "main.js.map": "/Codershigh_OnlineCourse/static/js/main.de06445e.chunk.js.map",
     "runtime-main.js": "/Codershigh_OnlineCourse/static/js/runtime-main.15b67e74.js",
     "runtime-main.js.map": "/Codershigh_OnlineCourse/static/js/runtime-main.15b67e74.js.map",
     "static/js/2.4e626cc8.chunk.js": "/Codershigh_OnlineCourse/static/js/2.4e626cc8.chunk.js",
     "static/js/2.4e626cc8.chunk.js.map": "/Codershigh_OnlineCourse/static/js/2.4e626cc8.chunk.js.map",
     "index.html": "/Codershigh_OnlineCourse/index.html",
-    "precache-manifest.407fdcd32f081a30c1d853a04d3f4336.js": "/Codershigh_OnlineCourse/precache-manifest.407fdcd32f081a30c1d853a04d3f4336.js",
+    "precache-manifest.da5f851d56d802d7fb5874c49e6b8907.js": "/Codershigh_OnlineCourse/precache-manifest.da5f851d56d802d7fb5874c49e6b8907.js",
     "service-worker.js": "/Codershigh_OnlineCourse/service-worker.js",
     "static/css/main.d5afd566.chunk.css.map": "/Codershigh_OnlineCourse/static/css/main.d5afd566.chunk.css.map",
     "static/js/2.4e626cc8.chunk.js.LICENSE.txt": "/Codershigh_OnlineCourse/static/js/2.4e626cc8.chunk.js.LICENSE.txt",
@@ -48,6 +48,6 @@
     "static/js/runtime-main.15b67e74.js",
     "static/js/2.4e626cc8.chunk.js",
     "static/css/main.d5afd566.chunk.css",
-    "static/js/main.4761f854.chunk.js"
+    "static/js/main.de06445e.chunk.js"
   ]
 }
