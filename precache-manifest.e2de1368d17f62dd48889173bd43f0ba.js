@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d93272d2da285a7d7eb13efb81b0adc8",
+    "revision": "20bf11def0fbf6aa0f61af3dba6caae8",
     "url": "/Codershigh_OnlineCourse/index.html"
   },
   {
-    "revision": "f9edb4c8132c69d1edbd",
+    "revision": "d948d1501b1f516ac204",
     "url": "/Codershigh_OnlineCourse/static/css/main.d5afd566.chunk.css"
   },
   {
-    "revision": "d210b137ed01fb243a9a",
-    "url": "/Codershigh_OnlineCourse/static/js/2.4e626cc8.chunk.js"
+    "revision": "8e502dd6d68c01834848",
+    "url": "/Codershigh_OnlineCourse/static/js/2.66070745.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/Codershigh_OnlineCourse/static/js/2.4e626cc8.chunk.js.LICENSE.txt"
+    "url": "/Codershigh_OnlineCourse/static/js/2.66070745.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f9edb4c8132c69d1edbd",
-    "url": "/Codershigh_OnlineCourse/static/js/main.8865f09b.chunk.js"
+    "revision": "d948d1501b1f516ac204",
+    "url": "/Codershigh_OnlineCourse/static/js/main.500c7141.chunk.js"
   },
   {
     "revision": "dbc524b17a31a89c2e2f",

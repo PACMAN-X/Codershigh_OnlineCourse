@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/Codershigh_OnlineCourse/static/css/main.d5afd566.chunk.css",
-    "main.js": "/Codershigh_OnlineCourse/static/js/main.8865f09b.chunk.js",
-    "main.js.map": "/Codershigh_OnlineCourse/static/js/main.8865f09b.chunk.js.map",
+    "main.js": "/Codershigh_OnlineCourse/static/js/main.500c7141.chunk.js",
+    "main.js.map": "/Codershigh_OnlineCourse/static/js/main.500c7141.chunk.js.map",
     "runtime-main.js": "/Codershigh_OnlineCourse/static/js/runtime-main.15b67e74.js",
     "runtime-main.js.map": "/Codershigh_OnlineCourse/static/js/runtime-main.15b67e74.js.map",
-    "static/js/2.4e626cc8.chunk.js": "/Codershigh_OnlineCourse/static/js/2.4e626cc8.chunk.js",
-    "static/js/2.4e626cc8.chunk.js.map": "/Codershigh_OnlineCourse/static/js/2.4e626cc8.chunk.js.map",
+    "static/js/2.66070745.chunk.js": "/Codershigh_OnlineCourse/static/js/2.66070745.chunk.js",
+    "static/js/2.66070745.chunk.js.map": "/Codershigh_OnlineCourse/static/js/2.66070745.chunk.js.map",
     "index.html": "/Codershigh_OnlineCourse/index.html",
-    "precache-manifest.083894a28ab98b4b84f0adbd26f7f055.js": "/Codershigh_OnlineCourse/precache-manifest.083894a28ab98b4b84f0adbd26f7f055.js",
+    "precache-manifest.e2de1368d17f62dd48889173bd43f0ba.js": "/Codershigh_OnlineCourse/precache-manifest.e2de1368d17f62dd48889173bd43f0ba.js",
     "service-worker.js": "/Codershigh_OnlineCourse/service-worker.js",
     "static/css/main.d5afd566.chunk.css.map": "/Codershigh_OnlineCourse/static/css/main.d5afd566.chunk.css.map",
-    "static/js/2.4e626cc8.chunk.js.LICENSE.txt": "/Codershigh_OnlineCourse/static/js/2.4e626cc8.chunk.js.LICENSE.txt",
+    "static/js/2.66070745.chunk.js.LICENSE.txt": "/Codershigh_OnlineCourse/static/js/2.66070745.chunk.js.LICENSE.txt",
     "static/media/13.jpg": "/Codershigh_OnlineCourse/static/media/13.9177d048.jpg",
     "static/media/CAU_Case_1.jpg": "/Codershigh_OnlineCourse/static/media/CAU_Case_1.99aa4252.jpg",
     "static/media/CAU_Case_2.jpg": "/Codershigh_OnlineCourse/static/media/CAU_Case_2.9d53b3ce.jpg",
@@ -46,8 +46,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.15b67e74.js",
-    "static/js/2.4e626cc8.chunk.js",
+    "static/js/2.66070745.chunk.js",
     "static/css/main.d5afd566.chunk.css",
-    "static/js/main.8865f09b.chunk.js"
+    "static/js/main.500c7141.chunk.js"
   ]
 }

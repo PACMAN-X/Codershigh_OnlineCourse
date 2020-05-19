@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Codershigh_OnlineCourse/precache-manifest.083894a28ab98b4b84f0adbd26f7f055.js"
+  "/Codershigh_OnlineCourse/precache-manifest.e2de1368d17f62dd48889173bd43f0ba.js"
 );
 
 self.addEventListener('message', (event) => {
