@@ -21,12 +21,12 @@ const CurriculumContainer = () => {
         '[필수] 7. Interface Essentials'
       ],
       URLs: {
-        '[필수] 스큐어모피즘과 플랫디자인': '',
-        '[필수] ADS, 페르소나, 멘탈모델': '',
-        '[선택] 내 앱은 왜 리젝될까?': '',
-        '[선택] 앱이 빨라지는 마술': '',
-        '[선택] 앱스토어 사례': '',
-        'iOS HIG 수업 1회차 :: iOS란?': '',
+        '[필수] 스큐어모피즘과 플랫디자인': 'https://youtu.be/OmWp4dgJ6_Y',
+        '[필수] ADS, 페르소나, 멘탈모델': 'https://youtu.be/HTwMDRb-p8s',
+        '[선택] 내 앱은 왜 리젝될까?': 'https://youtu.be/vH-W6dN1ZOs',
+        '[선택] 앱이 빨라지는 마술': 'https://youtu.be/QEX4DNVT2SQ',
+        '[선택] 앱스토어 사례': 'https://youtu.be/V60KmDRAt_U',
+        'iOS HIG 수업 1회차 :: iOS란?':'',
         '[필수] 1. 오리엔테이션': 'https://youtu.be/A79TQAlYxEw',
         '[필수] 2. iOS 디자인 테마': 'https://youtu.be/A79TQAlYxEw',
         '[선택] 3. Mac Catalyst 시작하기': 'https://youtu.be/MdmSdJCIm60',
@@ -55,10 +55,10 @@ const CurriculumContainer = () => {
         '[선택]09 Settings1'
       ],
       URLs: {
-        '프로토타입 1': '',
-        '프로토타입 2': '',
-        Multitasking: '',
-        Sandbox: '',
+        '프로토타입 1': 'https://youtu.be/d-gWLNDMhr8',
+        '프로토타입 2': 'https://youtu.be/gLSZBBgxFqc',
+        'Multitasking': 'https://programmers.co.kr/learn/courses/4/lessons/213',
+        'Sandbox': 'https://programmers.co.kr/learn/courses/4/lessons/214',
         'iOS HIG 수업 2회차 :: App Architecture': '',
         '[필수]01 Launching': 'https://youtu.be/UV9uKwX8tII',
         '[필수]02 Launching': 'https://youtu.be/VXRhV8va4no',
