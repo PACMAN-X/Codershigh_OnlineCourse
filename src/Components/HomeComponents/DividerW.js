@@ -7,15 +7,14 @@ const DividerWBlock = styled.div`
   color: black;
   background-color: #fdfdfd;
   text-align: center;
-  padding-top: 70px;
-  padding-bottom: 70px;
+  padding: ${(props) => props.theme.padding};
 `;
 
 const DividerWBlockColumn = styled.p`
-  line-height: 40px;
-  font-size: 20px;
+  ${(props) => props.theme.setMediaQuery(2)};
   &:last-child {
-    font-size: 30px;
+    font-weight: 600;
+    ${(props) => props.theme.setMediaQuery(1)};
     color: #007bec;
   }
 `;
@@ -36,9 +35,10 @@ const DividerW = () => (
       <DividerWBlockColumn>
         교사와 학생, 학생과 학생 사이의
         <br />
-        소통과 협업이 활발하게 이루어지는
+        소통과 협업이 <br />
+        활발하게 이루어지는
         <br />
-        실시간 원격 코스입니다
+        실시간 원격 코스입니다.
       </DividerWBlockColumn>
     </DividerWBlock>
     <BottomImage src={require('../../Assets/Images/twomen.jpg')}></BottomImage>

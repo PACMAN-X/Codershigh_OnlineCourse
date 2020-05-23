@@ -1,5 +1,5 @@
 .btn {
-    border: none;
+    border: 3px solid white;
     outline: none;
     padding: 10px 16px;
     background-color: transparent;
@@ -8,6 +8,7 @@
     font-size: 18px;
 }
 .active, .btn:hover {
+    border: none;
     background-color: #007bec;
     color: white;
 }

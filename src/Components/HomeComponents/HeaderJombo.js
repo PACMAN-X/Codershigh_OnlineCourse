@@ -1,74 +1,77 @@
 import React from 'react';
 import styled from 'styled-components';
+import wreathImage from '../../Assets/Images/wreath.png';
 
 const Container = styled.div`
   width: 100%;
   height: 100%;
-  background-color: #007bec;
+  background-color: ${(props) => props.theme.cBlue};
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: ${(props) => props.theme.padding};
 `;
 
-const DescriptionContainer = styled.div`
-  margin-top: 36.5px;
+const WreathContainer = styled.div`
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 30px;
+`;
+
+const WreathColumn = styled.div`
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 60%;
-  height: 20%;
+  background-image: url(${wreathImage});
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 6vw;
 `;
 
-const Description = styled.div`
-  font-family: CoreGothicE-3;
-  margin-top: 15px;
-  font-size: 15px;
-  font-weight: 300;
+const WreathTitle = styled.div`
+  width: 100%;
+  height: 100%;
   display: flex;
+  justify-content: center;
+  ${(props) => props.theme.setMediaQuery(7)};
+  font-weight: lighter;
+  margin-bottom: 5px;
+`;
+
+const WreathDescription = styled.div`
+  ${(props) => props.theme.setMediaQuery(7)};
+  font-weight: bold;
 `;
 
 const TitleContainer = styled.div`
-  width: 60%;
-  position: relative;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 `;
 
 const MainTitle = styled.div`
+  ${(props) => props.theme.setMediaQuery(1)};
   width: 100%;
-  font-size: 45px;
-  font-family: CoreGothicE-8;
-  font-size: 45px;
-  font-weight: 900;
-  margin-top: 49.5px;
-  padding-top: 34px;
-  padding-bottom: 18.5px;
-  border: solid 6px #ffffff;
-  border-radius: 7.5px;
-  text-align: center;
-`;
-
-const SmallTitleContainer = styled.div`
-  width: 270px;
-  height: 50px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  position: absolute;
-  left: 50%;
-  margin-left: -135px;
-  top: 50%;
-  margin-top: -50px;
+  align-items: center;
 `;
 
 const SmallTitle = styled.div`
   width: 100%;
   height: 100%;
-  background-color: #007bec;
+  background-color: ${(props) => props.theme.cBlue};
   color: white;
-  font-family: CoreGothicE-3;
   font-size: 30px;
   font-weight: 300;
   display: flex;
@@ -77,53 +80,70 @@ const SmallTitle = styled.div`
 `;
 
 const ExtendedSmallTitle = styled(SmallTitle)`
-  margin-top: 100px;
+  ${(props) => props.theme.setMediaQuery(3)};
+  margin-top: 50px;
   margin-bottom: 15px;
 `;
 
 const CodershighLogo = styled.img`
-  width: 100%;
+  margin-top: 5vw;
+  width: 40%;
+  max-width: 400px;
   height: 100%;
-  background-color: #007bec;
+  background-color: ${(props) => props.theme.cBlue};
   object-fit: contain;
+  &:nth-child(2) {
+    width: 60%;
+    max-width: 500px;
+    height: 100%;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+  }
 `;
 
 const DayContainer = styled.div`
-  width: 60%;
+  width: 100%;
   margin-top: 26.5px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  padding: 0px 10vw;
 `;
 
+const DayRow = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin: 10px 0px;
+`;
 const DayColumn = styled.div`
+  width: 100%;
+  margin-right: 20px;
+  display: flex;
+  justify-content: flex-end;
+`;
+
+const DayTitle = styled.div`
+  ${(props) => props.theme.setMediaQuery(5)};
+  width: 100%;
+  height: 100%;
+  max-width: 150px;
+  color: #007bec;
+  font-weight: 900;
+  background-color: white;
+  border-radius: 20px;
+  border: solid 1.5px #ffffff;
+  background-color: #ffffff;
+  padding: 10px;
+  text-align: center;
+`;
+const DayContent = styled.div`
+  ${(props) => props.theme.setMediaQuery(5)};
   width: 100%;
   height: 100%;
   display: flex;
-`;
-
-const DayColumnTitle = styled.div`
-  width: 100px;
-  height: 30px;
-  font-family: CoreGothicE-8;
-  color: #007bec;
-  font-size: 15px;
-  font-weight: 900;
-  background-color: white;
-  border-radius: 12.3px;
-  border: solid 1.5px #ffffff;
-  background-color: #ffffff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 10px;
-`;
-
-const DayColumnDate = styled.div`
-  width: 100%;
-  font-family: CoreGothicE-4;
-  font-size: 15px;
-  display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 `;
 
@@ -132,60 +152,98 @@ const PriceContainer = styled.div`
 `;
 
 const PriceColumn = styled.div`
+  ${(props) => props.theme.setMediaQuery(1)};
   display: flex;
   align-items: center;
   margin-right: 5px;
-  font-size: 60px;
   &:nth-child(1) {
     text-decoration: line-through;
-    font-size: 36px;
+    ${(props) => props.theme.setMediaQuery(3)};
   }
 `;
 
 const RegisterButton = styled.button`
   margin-top: 44.5px;
-  width: 60%;
-  padding: 5px 0px;
-  height: 36px;
-  border-radius: 4px;
-  box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.5);
+  width: 100px;
+  padding: 20px 0px;
+  border-radius: 40px;
   background-color: #ffffff;
-  font-family: CoreGothicE-8;
-  font-size: 16px;
+  ${(props) => props.theme.setMediaQuery(4)};
   font-weight: 900;
   color: #007bec;
   margin-bottom: 60px;
+  position: fixed;
+  z-index: 100;
+  left: 30px;
+  bottom: -35px;
+  cursor: pointer;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 3px 12px 0px !important;
 `;
 
 const HeaderJombo = () => (
   <Container>
-    <DescriptionContainer>
-      <Description>방학 특강 신청 경쟁률 3:1</Description>
-      <Description>누적 수강생 5,000명 이상</Description>
-      <Description>수업을 통해 25건 이상의 iOS 앱 출시</Description>
-    </DescriptionContainer>
+    <WreathContainer>
+      <WreathColumn>
+        <WreathTitle>누적 수강생</WreathTitle>
+        <WreathDescription>5,000명 이상</WreathDescription>
+      </WreathColumn>
+      <WreathColumn>
+        <WreathTitle>방학 특강 신청</WreathTitle>
+        <WreathDescription>경쟁률 3:1</WreathDescription>
+      </WreathColumn>
+      <WreathColumn>
+        <WreathTitle>수강생 출시 앱</WreathTitle>
+        <WreathDescription>25건 이상</WreathDescription>
+      </WreathColumn>
+    </WreathContainer>
     <TitleContainer>
-      <SmallTitleContainer>
+      <MainTitle>
         <CodershighLogo src={require('../../Assets/Images/codershigh.png')} />
-      </SmallTitleContainer>
-      <MainTitle>실시간 원격 코스 출시</MainTitle>
+        <CodershighLogo src={require('../../Assets/Images/maintitle.png')} />
+      </MainTitle>
     </TitleContainer>
     <DayContainer>
-      <DayColumn>
-        <DayColumnTitle>모집 기간</DayColumnTitle>
-        <DayColumnDate>5월 2일 ~ 6월 26일</DayColumnDate>
-      </DayColumn>
-      <DayColumn>
-        <DayColumnTitle>수강 기간</DayColumnTitle>
-        <DayColumnDate>7월 6일 개강(12주 코스)</DayColumnDate>
-      </DayColumn>
+      <DayRow>
+        <DayColumn>
+          <DayTitle>모집 기간</DayTitle>
+        </DayColumn>
+        <DayColumn>
+          <DayContent>5월 2일 ~ 6월 26일</DayContent>
+        </DayColumn>
+      </DayRow>
+      <DayRow>
+        <DayColumn>
+          <DayTitle>수강 기간</DayTitle>
+        </DayColumn>
+        <DayColumn>
+          <DayContent>7월 6일 ~ 9월 25일 (12주)</DayContent>
+        </DayColumn>
+      </DayRow>
+      <DayRow>
+        <DayColumn>
+          <DayTitle>수강 정원</DayTitle>
+        </DayColumn>
+        <DayColumn>
+          <DayContent>30명 (선착순 마감)</DayContent>
+        </DayColumn>
+      </DayRow>
+      <DayRow>
+        <DayColumn>
+          <DayTitle>개강 일시</DayTitle>
+        </DayColumn>
+        <DayColumn>
+          <DayContent>7월 6일 월요일 저녁 7시</DayContent>
+        </DayColumn>
+      </DayRow>
     </DayContainer>
-    <ExtendedSmallTitle>오프닝 특가</ExtendedSmallTitle>
+    <ExtendedSmallTitle>출시 기념 오프닝 특가</ExtendedSmallTitle>
     <PriceContainer>
-      <PriceColumn>500,000</PriceColumn>
+      <PriceColumn>550,000</PriceColumn>
       <PriceColumn>489,000</PriceColumn>
     </PriceContainer>
-    <RegisterButton>1차 얼리버드 등록하기</RegisterButton>
+
+    {/* 네이버 스마트 스토어? -> 등록하기 floating 되면 어떨가? 채팅 상담 옆에 등록하기가 떠 있는 것으로 */}
   </Container>
 );
 export default HeaderJombo;

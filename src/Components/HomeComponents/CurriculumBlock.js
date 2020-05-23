@@ -8,13 +8,12 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #007bec;
+  background-color: ${(props) => props.theme.cBlue};
   text-align: center;
-  padding-top: 36px;
-  padding-bottom: 43px;
+  padding: ${(props) => props.theme.padding};
 `;
 const MainTitle = styled.div`
-  font-size: 30px;
+  ${(props) => props.theme.setMediaQuery(1)};
   margin-bottom: 10px;
   text-align: center;
   color: black;
@@ -25,7 +24,8 @@ const MainTitle = styled.div`
 
 const BoxContainer = styled.div`
   margin-top: 40px;
-  width: 70%;
+  width: 100%;
+  max-width: 700px;
   height: 100%;
   display: flex;
   flex-direction: row;
@@ -33,17 +33,19 @@ const BoxContainer = styled.div`
   margin-bottom: 20px;
 `;
 const BoxColumn = styled.div`
-  width: 320px;
+  width: 100%;
   font-size: 100px;
-
   display: column;
   justify-content: center;
   align-items: center;
+  &:nth-child(2) {
+    width: 50%;
+  }
 `;
 const BoxTitle = styled.div`
   background-color: #fdfdfd;
-  padding: 10px 50px;
-  font-size: 16px;
+  padding: 10px;
+  ${(props) => props.theme.setMediaQuery(4)};
   color: black;
   border-radius: 5px;
   box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.5);
@@ -51,9 +53,9 @@ const BoxTitle = styled.div`
 const BoxDescription = styled.div`
   margin-top: 20px;
   background-color: #fdfdfd;
-  padding: 22px 7px;
+  padding: 10px;
   color: black;
-  font-size: 12px;
+  ${(props) => props.theme.setMediaQuery(5)};
   border-radius: 5px;
   box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.5);
   line-height: 15px;
@@ -61,7 +63,7 @@ const BoxDescription = styled.div`
 
 const DirectLink = styled(Link)`
   margin: 20px;
-  font-size: 18px;
+  ${(props) => props.theme.setMediaQuery(4)};
   text-decoration: underline;
   &:last-child {
     opacity: 0.8;

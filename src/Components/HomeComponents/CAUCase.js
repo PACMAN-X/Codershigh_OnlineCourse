@@ -4,20 +4,20 @@ import styled from 'styled-components';
 const Container = styled.div`
   width: 100%;
   height: 100%;
-  background-color: #007bec;
-
+  background-color: #1c92ff;
   display: flex;
   flex-direction: column;
   align-items: center;
+  ${(props) => props.theme.padding};
 `;
 const MainTitle = styled.div`
-  font-size: 40px;
+  ${(props) => props.theme.setMediaQuery(1)};
   margin-top: 70px;
 `;
 
 const DescriptionBlock = styled.div`
   text-align: center;
-  font-size: 20px;
+  ${(props) => props.theme.setMediaQuery(3)};
   margin-bottom: 30px;
   line-height: 30px;
   margin-top: 50px;
@@ -36,7 +36,7 @@ const ImageContent = styled.img`
 `;
 const ImageDescription = styled.div`
   margin-top: 5px;
-  font-size: 10px;
+  ${(props) => props.theme.setMediaQuery(6)};
 `;
 
 const B = (props) => (
@@ -51,7 +51,8 @@ const CAUCase = () => (
       <B>대학 본부에서 직접 관리하는 수업</B>이었습니다.
     </DescriptionBlock>
     <DescriptionBlock>
-      코더스하이는 교내 <B>iMac 실습실</B> 구성에도 의견을 드리며 <br />
+      코더스하이는 교내 <B>iMac 실습실</B>
+      구성에도 의견을 드리며 <br />
       <B>국내 최고의 애플 교육 환경을 조성했습니다.</B>
     </DescriptionBlock>
     <ImageContainer>

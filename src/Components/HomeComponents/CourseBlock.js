@@ -8,35 +8,38 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 100px;
+  padding: ${(props) => props.theme.padding};
 `;
 
 const CourseHeader = styled.div`
   width: 300px;
   height: 50px;
   color: black;
-  font-size: 15pt;
+  ${(props) => props.theme.setMediaQuery(4)};
   border: 1px solid black;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 100px;
+  margin-top: 20px;
 `;
 
 const ImageContent = styled.img`
   margin-top: 20px;
-  width: 60%;
-  height: 60%;
+  width: 100%;
+  max-width: 800px;
+  height: 100%;
 `;
 const DirectLink = styled.a`
   margin: 20px;
   color: black;
-  font-size: 18px;
+  ${(props) => props.theme.setMediaQuery(4)};
   text-decoration: underline;
   cursor: pointer;
   font-weight: bold;
 `;
 const Description = styled.div`
+  ${(props) => props.theme.setMediaQuery(4)};
   margin-bottom: 15px;
   font-size: 15px;
   color: black;
@@ -49,7 +52,7 @@ const DividerW = () => (
     <Description>당신의 포트폴리오에 앱 개발 경험을 채워 넣으세요.</Description>
     <CourseHeader>실시간 원격 코스 진행 방식</CourseHeader>
     <ImageContent
-      src={require('../../Assets/Block_Images/13.jpg')}
+      src={require('../../Assets/Images/ImageBlock.png')}
     ></ImageContent>
     <DirectLink
       rel="noopener noreferrer"

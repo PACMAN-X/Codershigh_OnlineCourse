@@ -5,7 +5,7 @@ import HeaderJombo from '../../Components/HomeComponents/HeaderJombo';
 import HeaderDescription from '../../Components/HomeComponents/HeaderDescription';
 import DividerB from '../../Components/HomeComponents/DividerB';
 import DividerW from '../../Components/HomeComponents/DividerW';
-import CourserBlock from '../../Components/HomeComponents/CourseBlock';
+import Courseblock from '../../Components/HomeComponents/CourseBlock';
 import CardNewsBlock from '../../Components/HomeComponents/CardNewsBlock';
 import LecturerBlock from '../../Components/HomeComponents/LecturerBlock';
 import BlockiOS from '../../Components/HomeComponents/BlockiOS';
@@ -14,6 +14,7 @@ import ImageBgBlock from '../../Components/HomeComponents/ImageBgBlock';
 import TextBlock from '../../Components/HomeComponents/TextBlock';
 import CurriculumBlock from '../../Components/HomeComponents/CurriculumBlock';
 import CompareBlock from '../../Components/HomeComponents/CompareBlock';
+import ApcspBlock from '../../Components/HomeComponents/ApcspBlock';
 import FooterBlock from '../../Components/HomeComponents/FooterBlock';
 
 const Container = styled.div``;
@@ -24,7 +25,7 @@ const HomePresenter = ({ universities }) => (
     <HeaderDescription></HeaderDescription>
     <DividerB></DividerB>
     <DividerW></DividerW>
-    <CourserBlock></CourserBlock>
+    <Courseblock></Courseblock>
     <CardNewsBlock></CardNewsBlock>
     <LecturerBlock universities={universities}></LecturerBlock>
     <BlockiOS></BlockiOS>
@@ -33,13 +34,13 @@ const HomePresenter = ({ universities }) => (
     <TextBlock></TextBlock>
     <CurriculumBlock></CurriculumBlock>
     <CompareBlock></CompareBlock>
-    <FooterBlock></FooterBlock>
+    <ApcspBlock></ApcspBlock>
   </Container>
 );
 
 HomePresenter.propTypes = {
   cardNews: PropTypes.array,
-  universities: PropTypes.array,
+  universities: PropTypes.array
 };
 
 export default HomePresenter;

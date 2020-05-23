@@ -2,45 +2,46 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
-  background-color: #007bec;
+  background-color: ${(props) => props.theme.cBlue};
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 64px;
+  padding: ${(props) => props.theme.padding};
 `;
 
 const CardNewsDescription = styled.div`
-  font-size: 15px;
-  line-height: 20px;
+  ${(props) => props.theme.setMediaQuery(2)};
   &:last-child {
-    font-weight: 800;
+    font-weight: 600;
   }
 `;
 
 const CardNewsTitle = styled.div`
   margin-top: 30px;
-  font-size: 30px;
+  ${(props) => props.theme.setMediaQuery(1)};
 `;
 
 const CardNewsContainer = styled.div`
-  width: 100%;
+  width: 80%;
   height: 100%;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
   align-items: center;
   margin-top: 40px;
   margin-bottom: 40px;
 `;
 
 const CardNewsBlockDefault = styled.div`
-  width: 100%;
-  height: 100%;
+  width: 25%;
+  min-width: 140px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   overflow: hidden;
+  margin-top: 10px;
 `;
 
 const CardNewsImg = styled.img`
@@ -52,7 +53,6 @@ const CardNewsImg = styled.img`
 
 const BlockCardNewsInfo = styled.div`
   width: 80%;
-  left: 10%;
   bottom: 0;
   position: absolute;
   background-color: #273949;
@@ -66,7 +66,6 @@ const BlockCardNewsInfo = styled.div`
 const BlockCardNews = styled.div`
   width: 80%;
   height: 80%;
-
   &:hover ${CardNewsImg} {
     transform: translateY(-25px);
   }
@@ -78,17 +77,26 @@ const BlockCardNews = styled.div`
 const CardNewsColumn = styled.div`
   height: 50px;
   width: 100%;
-  padding: 12px 10px 10px 10px;
   display: flex;
   justify-content: center;
   align-items: center;
+  &:nth-child(2) {
+    width: 70%;
+  }
 `;
 
 const CardNewsInfo = styled.div`
-  font-size: 10px;
+  ${(props) => props.theme.setMediaQuery(6)};
   font-weight: 700;
   color: white;
-  margin-bottom: 2px;
+  text-align: left;
+`;
+
+const CarNewsbtn = styled.button`
+  ${(props) => props.theme.setMediaQuery(6)};
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
 `;
 
 const CardNewsBlock = () => (
@@ -112,7 +120,7 @@ const CardNewsBlock = () => (
                 target="_blank"
                 href="https://www.facebook.com/codershighteam/posts/1228818117320856"
               >
-                <button>살펴보기</button>
+                <CarNewsbtn>살펴보기</CarNewsbtn>
               </a>
             </CardNewsColumn>
           </BlockCardNewsInfo>
@@ -125,7 +133,7 @@ const CardNewsBlock = () => (
           ></CardNewsImg>
           <BlockCardNewsInfo>
             <CardNewsColumn>
-              <CardNewsInfo>앱 출시!?</CardNewsInfo>
+              <CardNewsInfo>문과생들이 앱?</CardNewsInfo>
             </CardNewsColumn>
             <CardNewsColumn>
               <a
@@ -133,7 +141,7 @@ const CardNewsBlock = () => (
                 target="_blank"
                 href="https://www.facebook.com/codershighteam/posts/1237510246451643"
               >
-                <button>살펴보기</button>
+                <CarNewsbtn>살펴보기</CarNewsbtn>
               </a>
             </CardNewsColumn>
           </BlockCardNewsInfo>
@@ -146,7 +154,7 @@ const CardNewsBlock = () => (
           ></CardNewsImg>
           <BlockCardNewsInfo>
             <CardNewsColumn>
-              <CardNewsInfo>앱 출시!?</CardNewsInfo>
+              <CardNewsInfo>삼성전자 취업!</CardNewsInfo>
             </CardNewsColumn>
             <CardNewsColumn>
               <a
@@ -154,7 +162,7 @@ const CardNewsBlock = () => (
                 target="_blank"
                 href="https://www.facebook.com/codershighteam/posts/1249197898616211"
               >
-                <button>살펴보기</button>
+                <CarNewsbtn>살펴보기</CarNewsbtn>
               </a>
             </CardNewsColumn>
           </BlockCardNewsInfo>
@@ -163,19 +171,19 @@ const CardNewsBlock = () => (
       <CardNewsBlockDefault>
         <BlockCardNews>
           <CardNewsImg
-            src={require('../../Assets/Block_Images/cardNews/news3.jpg')}
+            src={require('../../Assets/Block_Images/cardNews/news4.jpg')}
           ></CardNewsImg>
           <BlockCardNewsInfo>
             <CardNewsColumn>
-              <CardNewsInfo>앱 출시!?</CardNewsInfo>
+              <CardNewsInfo>카카오에?</CardNewsInfo>
             </CardNewsColumn>
             <CardNewsColumn>
               <a
                 rel="noopener noreferrer"
                 target="_blank"
-                href="https://www.facebook.com/codershighteam/posts/1249197898616211"
+                href="https://www.facebook.com/codershighteam/posts/1271911513011516/"
               >
-                <button>살펴보기</button>
+                <CarNewsbtn>살펴보기</CarNewsbtn>
               </a>
             </CardNewsColumn>
           </BlockCardNewsInfo>

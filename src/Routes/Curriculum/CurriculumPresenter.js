@@ -16,7 +16,7 @@ const Container = styled.div`
 const CurriculumHeader = styled.div`
   width: 100%;
   height: 100%;
-  background-color: #007bec;
+  background-color: ${(props) => props.theme.cBlue};
   padding: 40px;
   display: flex;
   flex-direction: column;
@@ -27,7 +27,6 @@ const MainTitle = styled.div`
   width: 100%;
   height: 100%;
   font-size: 45px;
-  font-family: CoreGothicE-8;
   font-weight: 900;
   text-align: center;
 `;
@@ -36,7 +35,6 @@ const MainTitleDescription = styled.div`
   width: 100%;
   height: 100%;
   font-size: 45px;
-  font-family: CoreGothicE-8;
   font-weight: lighter;
   text-align: center;
 `;
@@ -98,7 +96,7 @@ const Circle = styled.div`
   justify-content: center;
   align-items: center;
   color: white;
-  background-color: #007bec;
+  background-color: ${(props) => props.theme.cBlue};
   border-radius: 100px;
   box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.5);
 `;

@@ -10,18 +10,16 @@ const Container = styled.div`
   align-items: center;
   background-color: #fdfdfd;
   text-align: center;
-  padding-top: 36px;
-  padding-bottom: 43px;
+  padding: ${(props) => props.theme.padding};
 `;
 
 const CourseHeader = styled.div`
   width: 300px;
   height: 50px;
   color: black;
-  font-size: 12pt;
-  border: 2px solid black;
+  ${(props) => props.theme.setMediaQuery(4)};
+  border: 1px solid black;
   display: flex;
-  font-weight: bold;
   align-items: center;
   justify-content: center;
   border-radius: 100px;
@@ -29,7 +27,8 @@ const CourseHeader = styled.div`
 
 const BoxContainer = styled.div`
   margin-top: 40px;
-  width: 60%;
+  width: 100%;
+  max-width: 700px;
   height: 100%;
   display: flex;
   flex-direction: row;
@@ -37,7 +36,7 @@ const BoxContainer = styled.div`
   margin-bottom: 20px;
 `;
 const BoxColumn = styled.div`
-  width: 200px;
+  width: 100%;
   font-size: 100px;
   display: column;
   justify-content: center;
@@ -51,13 +50,12 @@ const BoxColumn = styled.div`
   }
 `;
 const BoxHeader = styled.div`
-  line-height: 15px;
-  font-size: 15px;
+  ${(props) => props.theme.setMediaQuery(5)};
 `;
 
 const BoxTitle = styled.div`
   margin-top: 10px;
-  font-size: 16px;
+  ${(props) => props.theme.setMediaQuery(5)};
 `;
 const BoxDescription = styled.div`
   margin-top: 20px;
@@ -71,7 +69,7 @@ const BoxDescription = styled.div`
 `;
 
 const BlueBoxDescription = styled(BoxDescription)`
-  background-color: #007bec;
+  background-color: ${(props) => props.theme.cBlue};
   color: white;
 `;
 
@@ -93,7 +91,7 @@ const RegisterButton = styled.button`
   border-radius: 4px;
   border: none;
   box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.5);
-  background-color: #007bec;
+  background-color: ${(props) => props.theme.cBlue};
   font-size: 16px;
   font-weight: 900;
   color: white;
@@ -178,10 +176,10 @@ const CompareBlock = () => (
         </BlueBoxDescription>
       </BoxColumn>
     </BoxContainer>
-    <RegisterButton>
+    {/* <RegisterButton>
       <B>등록하러 가기</B>
-    </RegisterButton>
-    <BoxHeader>
+    </RegisterButton> */}
+    {/* <BoxHeader>
       이메일 주소를 남겨주시면 <br />
       코더스하이의 최신 교육 프로그램을 알려드립니다.
     </BoxHeader>
@@ -192,7 +190,7 @@ const CompareBlock = () => (
       <InputColumn>
         <SubmitButton> 이메일 남기기 </SubmitButton>
       </InputColumn>
-    </InputContainer>
+    </InputContainer> */}
   </Container>
 );
 

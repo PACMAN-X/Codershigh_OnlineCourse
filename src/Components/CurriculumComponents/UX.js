@@ -60,7 +60,7 @@ const ImageContent = styled.img`
 `;
 
 const CurriculumButtonContainer = styled.div`
-  padding: 20px;
+  padding: 10px;
   width: 70%;
   height: 100%;
   display: flex;
@@ -72,7 +72,7 @@ const CurriculumButton = styled.button`
   width: 20%;
   font-size: 16px;
   border-radius: 20px;
-  padding: 10px;
+  padding: 5px;
 `;
 
 const CurriculumWeekDetailContainer = styled.div`

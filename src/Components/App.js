@@ -2,11 +2,11 @@ import React from 'react';
 import Router from './Router';
 import GlobalStyles from './GlobalStyles';
 import { ThemeProvider } from 'styled-components';
-import Theme from '../Styles/Theme.js';
+import { theme } from '../Styles/Theme';
 
 function App() {
   return (
-    <ThemeProvider theme={Theme}>
+    <ThemeProvider theme={theme}>
       <>
         <GlobalStyles></GlobalStyles>
         <Router></Router>

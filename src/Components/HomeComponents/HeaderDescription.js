@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
+  padding: ${(props) => props.theme.padding};
   width: 100%;
   background-color: #f4f4f4;
   display: flex;
@@ -12,7 +13,7 @@ const Container = styled.div`
 `;
 
 const AvatarContainer = styled.div`
-  width: 60%;
+  width: 90%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -40,36 +41,34 @@ const AvatarContainerColumn = styled.div`
 `;
 
 const AvatarImg = styled.img`
-  width: 145px;
-  height: 145px;
+  width: 70%;
+  max-width: 150px;
+  height: 70%;
   object-fit: contain;
 `;
 
 const AvatarDescription = styled.span`
-  font-family: CoreGothicE-8;
-  font-size: 16px;
-  font-weight: 900;
+  ${(props) => props.theme.setMediaQuery(5)};
+  font-weight: 600;
   color: #000000;
-  padding-left: 23px;
-  padding-right: 23px;
+  padding-left: 20px;
+  padding-right: 20px;
 `;
 
 const AvatarInfo = styled.span`
-  font-family: CoreGothicE-5;
-  font-size: 11px;
+  ${(props) => props.theme.setMediaQuery(6)};
   font-weight: 500;
   color: #000000;
   margin-top: 10px;
-  padding-left: 23px;
-  padding-right: 23px;
+  padding-left: 20px;
+  padding-right: 20px;
 `;
 
 const BottomDescription = styled.div`
-  font-size: 30px;
   color: black;
   text-align: center;
   margin-top: 80px;
-  padding-bottom: 64px;
+  ${(props) => props.theme.setMediaQuery(1)};
 `;
 
 const HeaderDescription = () => (

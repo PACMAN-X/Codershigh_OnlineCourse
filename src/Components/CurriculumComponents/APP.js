@@ -60,19 +60,19 @@ const ImageContent = styled.img`
 `;
 
 const CurriculumButtonContainer = styled.div`
-  padding: 20px;
+  padding: 10px;
   width: 70%;
   height: 100%;
-  display: grid;
-  grid-template-columns: repeat(4, 2fr);
-  grid-gap: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 `;
 
 const CurriculumButton = styled.button`
-  width: 100%;
+  width: 20%;
   font-size: 16px;
   border-radius: 20px;
-  padding: 10px;
+  padding: 5px;
 `;
 
 const CurriculumWeekDetailContainer = styled.div`
@@ -243,6 +243,8 @@ const UX = ({ coursesDetailAPP }) => {
         <CurriculumButton onClick={() => setShowCase(3)} className="btn">
           4주차
         </CurriculumButton>
+      </CurriculumButtonContainer>
+      <CurriculumButtonContainer>
         <CurriculumButton onClick={() => setShowCase(4)} className="btn">
           5주차
         </CurriculumButton>
@@ -312,7 +314,7 @@ const UX = ({ coursesDetailAPP }) => {
           ) : (
             <ComingSoonText>
               Coming Soon
-              <span role="img" description="aria-label">
+              <span role="img" aria-label="rating">
                 😉
               </span>
             </ComingSoonText>

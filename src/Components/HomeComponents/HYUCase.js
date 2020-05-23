@@ -8,15 +8,16 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  ${(props) => props.theme.padding};
 `;
 const MainTitle = styled.div`
-  font-size: 40px;
+  ${(props) => props.theme.setMediaQuery(1)};
   margin-top: 70px;
 `;
 
 const DescriptionBlock = styled.div`
   text-align: center;
-  font-size: 20px;
+  ${(props) => props.theme.setMediaQuery(2)};
   margin-bottom: 30px;
   line-height: 30px;
   margin-top: 50px;
@@ -35,7 +36,7 @@ const ImageContent = styled.img`
 `;
 const ImageDescription = styled.div`
   margin-top: 5px;
-  font-size: 10px;
+  ${(props) => props.theme.setMediaQuery(6)};
 `;
 
 const B = (props) => (

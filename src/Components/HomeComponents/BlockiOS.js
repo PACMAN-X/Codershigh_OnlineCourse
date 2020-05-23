@@ -9,10 +9,11 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: ${(props) => props.theme.padding};
 `;
 
 const MainTitle = styled.div`
-  font-size: 30px;
+  ${(props) => props.theme.setMediaQuery(1)};
   margin-top: 20px;
   text-align: center;
   color: black;
@@ -20,11 +21,9 @@ const MainTitle = styled.div`
 `;
 
 const Description = styled.div`
-  margin-top: 48px;
-  font-size: 20px;
+  ${(props) => props.theme.setMediaQuery(4)};
   color: black;
   text-align: center;
-  line-height: 30px;
   &:last-child {
     margin-bottom: 48px;
   }
@@ -35,16 +34,18 @@ const HalfBackground = styled.span`
 `;
 
 const ImageContent = styled.img`
-  height: 50%;
-  width: 50%;
+  height: 100%;
+  width: 40%;
   margin-top: 40px;
+  margin-bottom: 40px;
   object-fit: contain;
 `;
 
 const Icon = styled.img`
-  width: 10%;
-  height: 10%;
-  margin-top: 40px;
+  width: 15%;
+  height: 100%;
+  max-width: 100px;
+  margin: 40px;
 `;
 
 const B = (props) => (

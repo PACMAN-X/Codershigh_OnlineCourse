@@ -9,7 +9,7 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 40px;
+  padding: ${(props) => props.theme.padding};
 `;
 const ContainerY = styled.div`
   width: 100%;
@@ -23,7 +23,7 @@ const ContainerY = styled.div`
 `;
 
 const DescriptionB = styled.div`
-  font-size: 20px;
+  ${(props) => props.theme.setMediaQuery(2)};
   text-align: center;
   line-height: 25px;
 `;
@@ -35,7 +35,28 @@ const Description = styled.div`
   color: black;
   &:nth-child(2) {
     font-size: 15px;
+    margin-top: 15px;
   }
+`;
+
+const ImageContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+`;
+const ImageColumn = styled.div`
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+const ImageContent = styled.img`
+  width: 80%;
+  margin-top: 20px;
+  max-width: 200px;
+  min-width: 100px;
 `;
 
 const HalfBackground = styled.span`
@@ -45,15 +66,15 @@ const HalfBackground = styled.span`
 const ImageDescription = styled.div`
   margin-top: 20px;
   margin-bottom: 20px;
-  font-size: 10px;
+  ${(props) => props.theme.setMediaQuery(6)};
   text-align: center;
-  line-height: 15px;
 `;
-const DirectLink = styled.span`
+const DirectLink = styled.a`
   margin: 20px;
   color: black;
-  font-size: 18px;
+  ${(props) => props.theme.setMediaQuery(4)};
   text-decoration: underline;
+  text-align: center;
   cursor: pointer;
 `;
 
@@ -79,17 +100,36 @@ const TextBlock = () => {
       </Container>
       <ContainerY>
         <Description>
-          <B>코딩을 전혀 경험한 적 없으신가요?</B> <br />
-          <B>제일 싫어하는 과목이 수학이라구요?</B> <br />
+          <B>내가 코딩을 잘 할 수 있을지 걱정이라면? </B>
           <br />
         </Description>
         <Description>
-          <B>무료로 제공되는 ‘코딩 배우기’를 수강해보며</B> <br />
+          <B>무료로 제공되는 ‘코딩 배우기’를 수강해보며 </B>
+          <br />
           개발자로서의 적성을 판단하고 기초를 쌓아보세요.
         </Description>
-        <DirectLink>
-          <B>코딩 배우기 수강 (100% 무료)</B>
-        </DirectLink>
+        <ImageContainer>
+          <ImageColumn>
+            <ImageContent src={require('../../Assets/Images/ltc1.jpg')} />
+            <DirectLink
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://www.inflearn.com/course/swift-high-coding1"
+            >
+              <B>코딩 배우기 1 수강하기 </B>
+            </DirectLink>
+          </ImageColumn>
+          <ImageColumn>
+            <ImageContent src={require('../../Assets/Images/ltc2.jpg')} />
+            <DirectLink
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://www.inflearn.com/course/temp_325451"
+            >
+              <B>코딩 배우기 2 수강하기</B>
+            </DirectLink>
+          </ImageColumn>
+        </ImageContainer>
       </ContainerY>
     </>
   );

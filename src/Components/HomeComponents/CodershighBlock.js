@@ -9,24 +9,23 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 100px;
+  padding: ${(props) => props.theme.padding};
 `;
 
 const CourseHeader = styled.div`
   width: 300px;
   height: 50px;
   color: black;
-  font-size: 12pt;
-  border: 2px solid black;
+  ${(props) => props.theme.setMediaQuery(4)};
+  border: 1px solid black;
   display: flex;
-  font-weight: bold;
   align-items: center;
   justify-content: center;
   border-radius: 100px;
 `;
 
 const MainTitle = styled.div`
-  font-size: 30px;
+  ${(props) => props.theme.setMediaQuery(1)};
   margin-top: 48px;
   text-align: center;
   color: black;
@@ -36,7 +35,7 @@ const MainTitle = styled.div`
 
 const Description = styled.div`
   margin-top: 48px;
-  font-size: 20px;
+  ${(props) => props.theme.setMediaQuery(3)};
   color: black;
   text-align: center;
   line-height: 30px;
@@ -55,7 +54,7 @@ const B = (props) => (
 const DirectLink = styled.a`
   margin: 20px;
   color: black;
-  font-size: 18px;
+  ${(props) => props.theme.setMediaQuery(4)};
   text-decoration: underline;
   cursor: pointer;
 `;

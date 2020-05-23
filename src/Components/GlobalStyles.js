@@ -12,21 +12,26 @@ const globalStyles = createGlobalStyle`
     *{
         box-sizing:border-box;
     }
+
+    
     @media (max-width: 1024px) {
         html, body {
-        height: 1024px;
-        width: 768px;
+            margin: auto;
+            width: 100%;
+            min-width: 375px;
+        }
     }
-    }
-    @media (min-width: 1920px) {
+
+    @media (min-width: 1024px) {
         html, body {
-        height: 100%;
-        width: 100%;
-    }
+            width: 100%;
+            height: 100%;
+            margin: auto;
+        }
     }
     body{
-        font-family:-apple-system, 'BlinkMacSystemFont', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        color:white;
+        font-family: "SF Pro KR","SF Pro Text","SF Pro Icons","Apple Gothic","HY Gulim","MalgunGothic","HY Dotum","Lexi Gulim","Helvetica Neue","Helvetica","Arial",sans-serif;
+        color: white;
         font-size: 12px;
     }
 `;

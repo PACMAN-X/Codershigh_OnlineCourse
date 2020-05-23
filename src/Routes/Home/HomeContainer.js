@@ -14,29 +14,29 @@ const HomeContainer = () => {
     '9.png',
     '10.png',
     '11.png',
-    '12.png',
+    '12.png'
   ];
   const cardNews = [
     {
       newsImage: require('../../Assets/Block_Images/cardNews/news1.jpg'),
       intervieweeInfo: '현)한양대학교 재학생',
       students: '전하영, 정상운, 최준호',
-      url: '"https://www.facebook.com/codershighteam/posts/1228818117320856"',
+      url: '"https://www.facebook.com/codershighteam/posts/1228818117320856"'
     },
     {
       newsImage: require('../../Assets/Block_Images/cardNews/news2.jpg'),
       intervieweeInfo: '현)중앙대학교 재학생',
       students: '안웅기, 서보민, 이지우',
       newsAddress:
-        'https://www.facebook.com/codershighteam/posts/1237510246451643',
+        'https://www.facebook.com/codershighteam/posts/1237510246451643'
     },
     {
       newsImage: require('../../Assets/Block_Images/cardNews/news3.jpg'),
       intervieweeInfo: '현)삼성전자 앱 개발부',
       students: '염혜리',
       newsAddress:
-        'https://www.facebook.com/codershighteam/posts/1249197898616211',
-    },
+        'https://www.facebook.com/codershighteam/posts/1249197898616211'
+    }
   ];
 
   // const Tutors = [
@@ -89,16 +89,8 @@ const HomeContainer = () => {
   // ];
 
   const universities = [
-    '고려대',
-    '광운대',
-    '동국대',
-    '서강대',
-    '서울대',
-    '서울여대',
-    '숙명여대',
-    '연세대',
-    '중앙대',
-    '한양대',
+    ['고려대', '광운대', '동국대', '서강대', '서울대'],
+    ['서울여대', '숙명여대', '연세대', '중앙대', '한양대']
   ];
 
   return (

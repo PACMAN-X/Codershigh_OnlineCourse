@@ -12,23 +12,26 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 100px;
+  &:nth-child(1) {
+    padding: ${(props) => props.theme.padding};
+  }
 `;
 
 const CourseHeader = styled.div`
   width: 300px;
   height: 50px;
   color: black;
-  font-size: 15pt;
+  ${(props) => props.theme.setMediaQuery(4)};
   border: 1px solid black;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 100px;
+  margin-top: 20px;
 `;
 
 const MainTitle = styled.div`
-  font-size: 48px;
+  ${(props) => props.theme.setMediaQuery(1)};
   margin-top: 48px;
   text-align: center;
   color: black;
@@ -36,7 +39,7 @@ const MainTitle = styled.div`
 
 const Description = styled.div`
   margin-top: 48px;
-  font-size: 20px;
+  ${(props) => props.theme.setMediaQuery(4)};
   color: black;
   text-align: center;
 `;
@@ -48,42 +51,50 @@ const HalfBackground = styled.span`
 // const IntroductionTutor = styled.div``;
 
 const IntroTitle = styled.div`
-  font-size: 25px;
+  ${(props) => props.theme.setMediaQuery(1)};
   color: black;
   margin-top: 72px;
   text-align: center;
 `;
 
 const UniversityCardContainer = styled.div`
-  width: 50%;
+  width: 70%;
   height: 50%;
-  display: grid;
+  display: flex;
+  flex-direction: row;
   margin-top: 50px;
-  grid-template-columns: repeat(5, 1fr);
-  grid-gap: 20px;
 `;
 
 const UniversityCard = styled.div`
+  width: 20%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 5px;
 `;
 
 const UniversityImg = styled.img`
-  width: 60px;
-  height: 60px;
+  width: 100%;
+  height: 10vh;
+  min-width: 20px;
+  min-height: 20px;
+  max-width: 80px;
+  max-height: 80px;
   object-fit: contain;
 `;
 
 const UniversityName = styled.div`
+  ${(props) => props.theme.setMediaQuery(5)};
   margin-top: 10px;
   color: #333333;
 `;
 
 const UniversityDetailContainer = styled.div`
-  width: 50%;
+  width: 100%;
+  padding: 0px 50px;
   margin-top: 80px;
-  margin-bottom: 150px;
+  margin-bottom: 50px;
   display: flex;
   justify-content: space-around;
 `;
@@ -91,9 +102,7 @@ const UniversityDetailContainer = styled.div`
 const UniversityDetailColumn = styled.div``;
 
 const UniversityDetailButton = styled.button`
-  font-size: 15px;
-  margin: 20px;
-  font-size: 18px;
+  ${(props) => props.theme.setMediaQuery(5)};
   text-decoration: underline;
   padding: 0;
   border: none;
@@ -127,8 +136,21 @@ const LecturerBlock = ({ universities }) => {
         코더스하이와 함께 했습니다
       </IntroTitle>
       <UniversityCardContainer>
-        {universities.map((university) => {
-          const Block = (
+        {universities[0].map((university) => {
+          var Block = (
+            <UniversityCard key={university}>
+              <UniversityImg
+                src={require(`../../Assets/Images/clients/universities/${university}.png`)}
+              />
+              <UniversityName>{university}</UniversityName>
+            </UniversityCard>
+          );
+          return Block;
+        })}
+      </UniversityCardContainer>
+      <UniversityCardContainer>
+        {universities[1].map((university) => {
+          var Block = (
             <UniversityCard key={university}>
               <UniversityImg
                 src={require(`../../Assets/Images/clients/universities/${university}.png`)}
