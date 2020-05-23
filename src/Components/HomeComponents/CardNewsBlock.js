@@ -99,6 +99,18 @@ const CarNewsbtn = styled.button`
   border: none;
 `;
 
+const YoutubeIframe = styled.iframe`
+  margin-bottom: 20px;
+  box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.5);
+  @media (max-width: 1024px) {
+    width: 280px;
+  }
+  @media (min-width: 1024px) {
+    width: 560px;
+    height: 315px;
+  }
+`;
+
 const CardNewsBlock = () => (
   <Container>
     <CardNewsDescription>앱 출시가 진짜 되냐고요?</CardNewsDescription>
@@ -190,6 +202,12 @@ const CardNewsBlock = () => (
         </BlockCardNews>
       </CardNewsBlockDefault>
     </CardNewsContainer>
+    <YoutubeIframe
+      src="https://www.youtube.com/embed/gox3EoRYmXw?start=160"
+      frameBorder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen
+    ></YoutubeIframe>
   </Container>
 );
 
