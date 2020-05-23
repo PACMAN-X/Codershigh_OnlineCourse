@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import './Curriculum.css';
 
 const Container = styled.div`
+  padding: ${(props) => props.theme.padding};
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,27 +14,29 @@ const CourseHeader = styled.div`
   width: 300px;
   height: 50px;
   color: black;
-  font-size: 15pt;
-  border: 2px solid black;
+  ${(props) => props.theme.setMediaQuery(4)};
+  border: 1px solid black;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 100px;
-  font-weight: bold;
 `;
 
 const CurriclumDescriptionContainer = styled.div`
-  width: 70%;
+  width: 90%;
   height: 100%;
   margin-top: 30px;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
 `;
 
 const CurriclumDescriptionColumn = styled.div`
   width: 50%;
-  height: 100%;
+  height: 50%;
+  min-width: 350px;
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -41,21 +44,22 @@ const CurriclumDescriptionColumn = styled.div`
 
 const CurriclumTitle = styled.div`
   color: black;
-  font-size: 20px;
+  ${(props) => props.theme.setMediaQuery(4)};
   font-weight: bold;
   margin-bottom: 20px;
-  line-height: 25px;
 `;
 
 const CurriclumDescription = styled.div`
+  width: 100%;
+  min-width: 200px;
   color: black;
-  font-size: 15px;
-  line-height: 20px;
+  ${(props) => props.theme.setMediaQuery(5)};
 `;
 
 const ImageContent = styled.img`
   width: 100%;
   height: 100%;
+  min-width: 300px;
   object-fit: contain;
 `;
 
@@ -70,15 +74,15 @@ const CurriculumButtonContainer = styled.div`
 
 const CurriculumButton = styled.button`
   width: 20%;
-  font-size: 16px;
+  ${(props) => props.theme.setMediaQuery(6)};
   border-radius: 20px;
   padding: 5px;
 `;
 
 const CurriculumWeekDetailContainer = styled.div`
   background-color: #fefff0;
-  width: 70%;
-  height: 70%;
+  width: 90%;
+  height: 90%;
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -88,38 +92,35 @@ const CurriculumWeekDetailContainer = styled.div`
 
 const CurriculumWeekDetailContent = styled.div``;
 const CurriculumWeekDetailTitle = styled.div`
-  font-size: 20px;
+  ${(props) => props.theme.setMediaQuery(4)};
   color: #007bec;
   font-weight: bold;
   margin-bottom: 20px;
 `;
 const CurriculumWeekDetailDescription = styled.div`
-  font-size: 12px;
-  line-height: 16px;
+  ${(props) => props.theme.setMediaQuery(6)};
   margin-top: 10px;
 `;
 
 const CurriculumWeekDetailDescriptionNecessary = styled.div`
-  font-size: 12px;
-  line-height: 16px;
+  ${(props) => props.theme.setMediaQuery(6)};
   font-weight: bold;
   margin-top: 10px;
 `;
 
 const CurriculumWeekDetailDescriptionHIG = styled.div`
-  font-size: 12px;
+  ${(props) => props.theme.setMediaQuery(6)};
   color: #007bec;
   margin-top: 30px;
   font-weight: bold;
 `;
 
 const DirectLink = styled.a`
-  margin: 40px;
-  font-size: 15px;
-  font-weight: bold;
-  color: black;
-  text-decoration: underline;
-  cursor: pointer;
+  ${(props) => {
+    if (props.href) {
+      return props.theme.linked;
+    }
+  }}
 `;
 
 const UX = ({ coursesDetailUX }) => {
@@ -155,11 +156,9 @@ const UX = ({ coursesDetailUX }) => {
         <CurriclumDescriptionColumn>
           <CurriclumTitle>앱의 구동방식을 설계하는 단계</CurriclumTitle>
           <CurriclumDescription>
-            UX 디자인 과정에서는, 4주에 걸쳐 앱의 아이디어를
-            <br /> 정리하고 구동 방식을 결정합니다. 이 과정을 통해
-            <br /> 개발자들은 아이디어를 시각화하는 것을 경험하고
-            <br /> 디자이너들에게는 앱이 동작하는 방식을 엿보는 기회가
-            <br />
+            UX 디자인 과정에서는, 4주에 걸쳐 앱의 아이디어를 정리하고 구동
+            방식을 결정합니다. 이 과정을 통해 개발자들은 아이디어를 시각화하는
+            것을 경험하고 디자이너들에게는 앱이 동작하는 방식을 엿보는 기회가
             되며, 기획자들은 사용자에 대한 통찰력을 얻게 됩니다.
           </CurriclumDescription>
         </CurriclumDescriptionColumn>
@@ -211,7 +210,13 @@ const UX = ({ coursesDetailUX }) => {
                     <CurriculumWeekDetailDescriptionNecessary
                       key={showCase + index + description}
                     >
-                      {description}
+                      <DirectLink
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        href={coursesDetailUX[showCase].URLs[description]}
+                      >
+                        {description}
+                      </DirectLink>
                     </CurriculumWeekDetailDescriptionNecessary>
                   );
                 } else if (description.indexOf('iOS HIG') !== -1) {
@@ -227,7 +232,13 @@ const UX = ({ coursesDetailUX }) => {
                     <CurriculumWeekDetailDescription
                       key={showCase + index + description}
                     >
-                      {description}
+                      <DirectLink
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        href={coursesDetailUX[showCase].URLs[description]}
+                      >
+                        {description}
+                      </DirectLink>
                     </CurriculumWeekDetailDescription>
                   );
                 }

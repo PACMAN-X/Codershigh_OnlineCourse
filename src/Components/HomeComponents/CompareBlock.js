@@ -83,51 +83,51 @@ const BoxCenter = styled.div`
   align-items: center;
 `;
 
-const RegisterButton = styled.button`
-  margin-top: 44.5px;
-  width: 70%;
-  padding: 5px 0px;
-  height: 36px;
-  border-radius: 4px;
-  border: none;
-  box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.5);
-  background-color: ${(props) => props.theme.cBlue};
-  font-size: 16px;
-  font-weight: 900;
-  color: white;
-  margin-bottom: 60px;
-`;
-const InputContainer = styled.form`
-  margin-top: 10px;
-  width: 50%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-`;
+// const RegisterButton = styled.button`
+//   margin-top: 44.5px;
+//   width: 70%;
+//   padding: 5px 0px;
+//   height: 36px;
+//   border-radius: 4px;
+//   border: none;
+//   box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.5);
+//   background-color: ${(props) => props.theme.cBlue};
+//   font-size: 16px;
+//   font-weight: 900;
+//   color: white;
+//   margin-bottom: 60px;
+// `;
+// const InputContainer = styled.form`
+//   margin-top: 10px;
+//   width: 50%;
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: center;
+// `;
 
-const InputColumn = styled.div`
-  &:first-child {
-    width: 50%;
-    padding-right: 10px;
-  }
-`;
+// const InputColumn = styled.div`
+//   &:first-child {
+//     width: 50%;
+//     padding-right: 10px;
+//   }
+// `;
 
-const EmailInput = styled.input`
-  border: 1px solid black;
-  border-radius: 4px;
-  width: 100%;
-  height: 36px;
-  padding: 5px;
-`;
+// const EmailInput = styled.input`
+//   border: 1px solid black;
+//   border-radius: 4px;
+//   width: 100%;
+//   height: 36px;
+//   padding: 5px;
+// `;
 
-const SubmitButton = styled.button`
-  width: 100%;
-  height: 36px;
-  border-radius: 4px;
-  background-color: #363636;
-  color: white;
-  font-weight: bold;
-`;
+// const SubmitButton = styled.button`
+//   width: 100%;
+//   height: 36px;
+//   border-radius: 4px;
+//   background-color: #363636;
+//   color: white;
+//   font-weight: bold;
+// `;
 
 const B = (props) => (
   <span style={{ fontWeight: 'bold' }}>{props.children}</span>

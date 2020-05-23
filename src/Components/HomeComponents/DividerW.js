@@ -14,7 +14,7 @@ const DividerWBlockColumn = styled.p`
   ${(props) => props.theme.setMediaQuery(2)};
   &:last-child {
     font-weight: 600;
-    ${(props) => props.theme.setMediaQuery(1)};
+    ${(props) => props.theme.setMediaQuery(2)};
     color: #007bec;
   }
 `;
@@ -33,9 +33,7 @@ const DividerW = () => (
       </DividerWBlockColumn>
       <br />
       <DividerWBlockColumn>
-        교사와 학생, 학생과 학생 사이의
-        <br />
-        소통과 협업이 <br />
+        교사와 학생, 학생과 학생 사이의 소통과 협업이 <br />
         활발하게 이루어지는
         <br />
         실시간 원격 코스입니다.

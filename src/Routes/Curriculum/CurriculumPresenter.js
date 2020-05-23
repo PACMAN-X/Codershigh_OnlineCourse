@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import UX from '../../Components/CurriculumComponents/UX';
 import APP from '../../Components/CurriculumComponents/APP';
 import PropTypes from 'prop-types';
+import FooterBlock from '../../Components/Footer/FooterBlock';
 
 const Container = styled.div`
   width: 100%;
@@ -26,7 +27,7 @@ const CurriculumHeader = styled.div`
 const MainTitle = styled.div`
   width: 100%;
   height: 100%;
-  font-size: 45px;
+  ${(props) => props.theme.setMediaQuery(1)};
   font-weight: 900;
   text-align: center;
 `;
@@ -34,7 +35,7 @@ const MainTitle = styled.div`
 const MainTitleDescription = styled.div`
   width: 100%;
   height: 100%;
-  font-size: 45px;
+  ${(props) => props.theme.setMediaQuery(1)};
   font-weight: lighter;
   text-align: center;
 `;
@@ -43,23 +44,18 @@ const CurriculumBody = styled.div`
   width: 100%;
   height: 100%;
   background-color: #eef3c0;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 `;
 
 const CurriculumBodyDescriptionMiddle = styled.div`
   padding: 40px;
-  font-size: 25px;
+  ${(props) => props.theme.setMediaQuery(3)};
   text-align: center;
   color: black;
   line-height: 45px;
-`;
-
-const CurriculumBodyDescriptionSmall = styled.div`
-  font-size: 15px;
-  margin: 10px;
-  line-height: 20px;
-  color: black;
 `;
 
 const HalfBackground = styled.span`
@@ -67,56 +63,8 @@ const HalfBackground = styled.span`
   background: linear-gradient(to top, #47dbd9 50%, transparent 50%);
 `;
 
-const CircleContainer = styled.div`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
-const CircleContainerColumn = styled.div`
-  font-size: 100px;
-  color: #007bec;
-  background-color: #eef3c0;
-  box-shadow: none;
-  margin: 0 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
-
-const Circle = styled.div`
-  width: 200px;
-  height: 200px;
-  font-size: 100px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  background-color: ${(props) => props.theme.cBlue};
-  border-radius: 100px;
-  box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.5);
-`;
-
-const CircleTitle = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 22px;
-`;
-const CircleDescription = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10px;
-  font-size: 15px;
-`;
-
 const UniversityDetailButton = styled.button`
-  font-size: 15px;
+  ${(props) => props.theme.setMediaQuery(5)};
   margin: 20px;
   font-size: 18px;
   text-decoration: underline;
@@ -133,6 +81,53 @@ const SmallText = styled.span`
 const B = (props) => (
   <span style={{ fontWeight: 'bold' }}>{props.children}</span>
 );
+
+const BoxContainer = styled.div`
+  background-color: #eef3c0;
+  margin-top: 40px;
+  width: 100%;
+  height: 100%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
+`;
+const BoxColumn = styled.div`
+  width: 100%;
+  height: 100%;
+  font-size: 100px;
+  color: ${(props) => props.theme.cBlue};
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &:nth-child(2) {
+    width: 50%;
+  }
+`;
+const BoxTitle = styled.div`
+  width: 13vw;
+  height: 13vw;
+  min-width: 100px;
+  min-height: 100px;
+  border-radius: 50%;
+  background-color: ${(props) => props.theme.cBlue};
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  ${(props) => props.theme.setMediaQuery(4)};
+  box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.5);
+`;
+const BoxDescription = styled.div`
+  margin-top: 20px;
+  padding: 10px;
+  text-align: center;
+  color: black;
+  ${(props) => props.theme.setMediaQuery(5)};
+`;
 
 const CurriculumPresenter = ({ coursesDetailUX, coursesDetailAPP }) => {
   const [showCase, setShowCase] = useState(true);
@@ -152,54 +147,50 @@ const CurriculumPresenter = ({ coursesDetailUX, coursesDetailAPP }) => {
           <br />
           <HalfBackground>총 12주 커리큘럼</HalfBackground>으로구성되어 있습니다
         </CurriculumBodyDescriptionMiddle>
-        <CircleContainer>
-          <CircleContainerColumn>
-            <Circle>
-              <CircleTitle>UX 디자인</CircleTitle>
-              <CircleDescription>(4주)</CircleDescription>
-            </Circle>
-            <CurriculumBodyDescriptionSmall>
+        <BoxContainer>
+          <BoxColumn>
+            <BoxTitle>
+              <B> UX 디자인 (4주)</B>
+            </BoxTitle>
+            <BoxDescription>
               앱을 만들기 위한 첫 단계로 <br />
               앱의 동작방식을 이해하고 <br />
               프로토타입을 제작합니다
-            </CurriculumBodyDescriptionSmall>
+            </BoxDescription>
             <UniversityDetailButton
               onClick={() => setShowCase(!showCase)}
               disabled={showCase}
             >
               자세히 보기
             </UniversityDetailButton>
-          </CircleContainerColumn>
-          <CircleContainerColumn>
-            +<CurriculumBodyDescriptionSmall></CurriculumBodyDescriptionSmall>
-          </CircleContainerColumn>
-          <CircleContainerColumn>
-            <Circle>
-              <CircleTitle>앱 개발</CircleTitle>
-              <CircleDescription>(8주)</CircleDescription>
-            </Circle>
-            <CurriculumBodyDescriptionSmall>
+          </BoxColumn>
+          <BoxColumn> ₊ </BoxColumn>
+          <BoxColumn>
+            <BoxTitle>
+              <B> 앱 개발 (8주)</B>
+            </BoxTitle>
+            <BoxDescription>
               3명이 한 팀을 이루어 <br />
               앱스토어에 올릴 수 있는 <br />
               수준의 앱을 개발합니다
-            </CurriculumBodyDescriptionSmall>
+            </BoxDescription>
             <UniversityDetailButton
               onClick={() => setShowCase(!showCase)}
               disabled={!showCase}
             >
               자세히 보기
             </UniversityDetailButton>
-          </CircleContainerColumn>
-        </CircleContainer>
+          </BoxColumn>
+        </BoxContainer>
         <CurriculumBodyDescriptionMiddle>
           코더스하이 실시간 원격 코스 수강을 위해서는 <br />
           <B>매주 5~10시간의 학습</B>
           <SmallText>(과제 수행 시간 포함)</SmallText>이 필요합니다.
         </CurriculumBodyDescriptionMiddle>
-
         {showCase && <UX coursesDetailUX={coursesDetailUX}></UX>}
         {!showCase && <APP coursesDetailAPP={coursesDetailAPP}></APP>}
       </CurriculumBody>
+      <FooterBlock></FooterBlock>
     </Container>
   );
 };

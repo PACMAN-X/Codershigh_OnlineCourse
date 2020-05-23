@@ -15,7 +15,7 @@ import TextBlock from '../../Components/HomeComponents/TextBlock';
 import CurriculumBlock from '../../Components/HomeComponents/CurriculumBlock';
 import CompareBlock from '../../Components/HomeComponents/CompareBlock';
 import ApcspBlock from '../../Components/HomeComponents/ApcspBlock';
-import FooterBlock from '../../Components/HomeComponents/FooterBlock';
+import FooterBlock from '../../Components/Footer/FooterBlock';
 
 const Container = styled.div``;
 
@@ -35,6 +35,7 @@ const HomePresenter = ({ universities }) => (
     <CurriculumBlock></CurriculumBlock>
     <CompareBlock></CompareBlock>
     <ApcspBlock></ApcspBlock>
+    <FooterBlock></FooterBlock>
   </Container>
 );
 

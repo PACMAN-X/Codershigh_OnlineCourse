@@ -1,6 +1,7 @@
 export const theme = {
   cBlue: '#007bec',
   padding: '2vh 3vw',
+  linked: 'text-decoration: underline; text-align: center;',
   setMediaQuery: (size) => {
     const minPadding = '0px 300px';
     const breakpoints = {

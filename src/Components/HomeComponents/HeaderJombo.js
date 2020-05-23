@@ -162,24 +162,24 @@ const PriceColumn = styled.div`
   }
 `;
 
-const RegisterButton = styled.button`
-  margin-top: 44.5px;
-  width: 100px;
-  padding: 20px 0px;
-  border-radius: 40px;
-  background-color: #ffffff;
-  ${(props) => props.theme.setMediaQuery(4)};
-  font-weight: 900;
-  color: #007bec;
-  margin-bottom: 60px;
-  position: fixed;
-  z-index: 100;
-  left: 30px;
-  bottom: -35px;
-  cursor: pointer;
-  border: none;
-  box-shadow: rgba(0, 0, 0, 0.12) 0px 3px 12px 0px !important;
-`;
+// const RegisterButton = styled.button`
+//   margin-top: 44.5px;
+//   width: 100px;
+//   padding: 20px 0px;
+//   border-radius: 40px;
+//   background-color: #ffffff;
+//   ${(props) => props.theme.setMediaQuery(4)};
+//   font-weight: 900;
+//   color: #007bec;
+//   margin-bottom: 60px;
+//   position: fixed;
+//   z-index: 100;
+//   left: 30px;
+//   bottom: -35px;
+//   cursor: pointer;
+//   border: none;
+//   box-shadow: rgba(0, 0, 0, 0.12) 0px 3px 12px 0px !important;
+// `;
 
 const HeaderJombo = () => (
   <Container>
