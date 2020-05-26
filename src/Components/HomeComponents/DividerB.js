@@ -10,8 +10,11 @@ const Container = styled.div`
 `;
 
 const DividerBlockColumn = styled.p`
-  ${(props) => props.theme.setMediaQuery(1)};
+  ${(props) => props.theme.setMediaQuery(2)};
+  margin-bottom: 2vw;
   &:first-child {
+    margin-bottom: 0px;
+    ${(props) => props.theme.setMediaQuery(1)};
     text-emphasis: filled sesame;
     -webkit-text-emphasis: filled white;
   }

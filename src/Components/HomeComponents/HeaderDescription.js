@@ -42,7 +42,7 @@ const AvatarContainerColumn = styled.div`
 
 const AvatarImg = styled.img`
   width: 70%;
-  max-width: 150px;
+  max-width: 130px;
   height: 70%;
   object-fit: contain;
 `;
@@ -59,7 +59,7 @@ const AvatarInfo = styled.span`
   ${(props) => props.theme.setMediaQuery(6)};
   font-weight: 500;
   color: #000000;
-  margin-top: 10px;
+  margin-top: 0.5vw;
   padding-left: 20px;
   padding-right: 20px;
 `;
@@ -67,8 +67,10 @@ const AvatarInfo = styled.span`
 const BottomDescription = styled.div`
   color: black;
   text-align: center;
-  margin-top: 80px;
-  ${(props) => props.theme.setMediaQuery(1)};
+  margin: 7vh 0;
+  ${(props) => props.theme.setMediaQuery(2)};
+
+  font-weight: bold;
 `;
 
 const HeaderDescription = () => (
@@ -93,7 +95,7 @@ const HeaderDescription = () => (
           혼자 공부하는 게 너무 어렵네요
           <br />잘 하고 있는 건지도 모르겠어요
         </AvatarDescription>
-        <AvatarInfo>대학생 김모씨 (23세)</AvatarInfo>
+        <AvatarInfo>직장인 최모씨 (27세)</AvatarInfo>
       </AvatarContainerColumn>
       <AvatarContainerColumn className="left_img">
         <AvatarImg

@@ -62,13 +62,12 @@ const BoxDescription = styled.div`
 `;
 
 const DirectLink = styled(Link)`
-  margin: 20px;
-  ${(props) => props.theme.setMediaQuery(4)};
-  text-decoration: underline;
   &:last-child {
-    opacity: 0.8;
+    margin-top: 20px;
+    ${(props) => props.theme.setMediaQuery(4)};
+    text-decoration: underline;
+    cursor: pointer;
   }
-  cursor: pointer;
 `;
 
 const B = (props) => (
@@ -84,29 +83,38 @@ const CurriculumBlock = () => (
         <BoxTitle>
           <B> UX 디자인 (4주)</B>
         </BoxTitle>
-        <BoxDescription>
-          앱을 만들기 위한 첫 단계로 <br />
-          앱의 동작방식을 이해하고 <br />
-          프로토타입을 제작합니다
-        </BoxDescription>
+        <DirectLink
+          rel="noopener noreferrer"
+          target="_blank"
+          to={'/curriculum'}
+        >
+          <BoxDescription>
+            앱을 만들기 위한 첫 단계로 <br />
+            앱의 동작방식을 이해하고 <br />
+            프로토타입을 제작합니다
+          </BoxDescription>
+        </DirectLink>
       </BoxColumn>
       <BoxColumn> ₊ </BoxColumn>
       <BoxColumn>
         <BoxTitle>
           <B> 앱 개발 (8주)</B>
         </BoxTitle>
-        <BoxDescription>
-          3명이 한 팀을 이루어 <br />
-          앱스토어에 올릴 수 있는 <br />
-          수준의 앱을 개발합니다
-        </BoxDescription>
+        <DirectLink
+          rel="noopener noreferrer"
+          target="_blank"
+          to={'/curriculum'}
+        >
+          <BoxDescription>
+            3명이 한 팀을 이루어 <br />
+            앱스토어에 올릴 수 있는 <br />
+            수준의 앱을 개발합니다
+          </BoxDescription>
+        </DirectLink>
       </BoxColumn>
     </BoxContainer>
     <DirectLink rel="noopener noreferrer" target="_blank" to={'/curriculum'}>
       <B>상세 커리큘럼 보기</B>
-    </DirectLink>
-    <DirectLink to={'/'}>
-      <B>단체 수강 문의</B>
     </DirectLink>
   </Container>
 );

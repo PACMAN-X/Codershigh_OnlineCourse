@@ -197,7 +197,8 @@ const CurriculumPresenter = ({ coursesDetailUX, coursesDetailAPP }) => {
 
 CurriculumPresenter.propTypes = {
   coursesDetailUX: PropTypes.array,
-  coursesDetailAPP: PropTypes.array
+  coursesDetailAPP: PropTypes.array,
+  showCase: PropTypes.bool
 };
 
 export default CurriculumPresenter;

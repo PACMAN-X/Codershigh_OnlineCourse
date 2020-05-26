@@ -13,24 +13,16 @@ const Container = styled.div`
 `;
 
 const CourseHeader = styled.div`
-  width: 300px;
+  width: 350px;
   height: 50px;
+  font-weight: bold;
   color: black;
   ${(props) => props.theme.setMediaQuery(4)};
-  border: 1px solid black;
+  border: 2px solid black;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 100px;
-`;
-
-const MainTitle = styled.div`
-  ${(props) => props.theme.setMediaQuery(1)};
-  margin-top: 48px;
-  text-align: center;
-  color: black;
-  font-weight: bold;
-  line-height: 40px;
 `;
 
 const Description = styled.div`
@@ -62,12 +54,7 @@ const DirectLink = styled.a`
 const CodershighBlock = () => {
   return (
     <Container>
-      <CourseHeader>온라인 강좌가 아닌, 개발 커뮤니티</CourseHeader>
-      <MainTitle>
-        한 번 코더스하이는
-        <br />
-        영원한 코더스하이
-      </MainTitle>
+      <CourseHeader>온라인 강좌를 넘어 개발자 커뮤니티로</CourseHeader>
       <Description>
         12주 과정이 끝나면 다시 혼자 공부해야 할까요? <br />
         <B>그렇지 않습니다.</B>
@@ -82,9 +69,6 @@ const CodershighBlock = () => {
         <br />
         개발자로 취업한 뒤에도 꾸준히 활발하게 소통합니다.
       </Description>
-      <ImageContent
-        src={require('../../Assets/Images/Codershigh_Reunion.jpg')}
-      />
       <DirectLink
         rel="noopener noreferrer"
         target="_blank"
@@ -92,6 +76,9 @@ const CodershighBlock = () => {
       >
         <B>코더스하이 동문 페이스북 그룹 바로가기</B>
       </DirectLink>
+      <ImageContent
+        src={require('../../Assets/Images/Codershigh_Reunion.jpg')}
+      />
       <DirectLink
         rel="noopener noreferrer"
         target="_blank"

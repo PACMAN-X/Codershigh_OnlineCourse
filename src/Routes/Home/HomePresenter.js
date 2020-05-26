@@ -5,7 +5,7 @@ import HeaderJombo from '../../Components/HomeComponents/HeaderJombo';
 import HeaderDescription from '../../Components/HomeComponents/HeaderDescription';
 import DividerB from '../../Components/HomeComponents/DividerB';
 import DividerW from '../../Components/HomeComponents/DividerW';
-import Courseblock from '../../Components/HomeComponents/CourseBlock';
+import StudentsOutputBlock from '../../Components/HomeComponents/StudentsOutputBlock';
 import CardNewsBlock from '../../Components/HomeComponents/CardNewsBlock';
 import LecturerBlock from '../../Components/HomeComponents/LecturerBlock';
 import BlockiOS from '../../Components/HomeComponents/BlockiOS';
@@ -25,7 +25,7 @@ const HomePresenter = ({ universities }) => (
     <HeaderDescription></HeaderDescription>
     <DividerB></DividerB>
     <DividerW></DividerW>
-    <Courseblock></Courseblock>
+    <StudentsOutputBlock></StudentsOutputBlock>
     <CardNewsBlock></CardNewsBlock>
     <LecturerBlock universities={universities}></LecturerBlock>
     <BlockiOS></BlockiOS>

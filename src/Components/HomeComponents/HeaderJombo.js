@@ -43,7 +43,6 @@ const WreathTitle = styled.div`
   justify-content: center;
   ${(props) => props.theme.setMediaQuery(7)};
   font-weight: lighter;
-  margin-bottom: 5px;
 `;
 
 const WreathDescription = styled.div`
@@ -81,22 +80,22 @@ const SmallTitle = styled.div`
 
 const ExtendedSmallTitle = styled(SmallTitle)`
   ${(props) => props.theme.setMediaQuery(3)};
-  margin-top: 50px;
-  margin-bottom: 15px;
+  margin: 5vw 0;
+  &:nth-child(1) {
+    font-weight: bold;
+  }
 `;
 
 const CodershighLogo = styled.img`
-  margin-top: 5vw;
   width: 40%;
-  max-width: 400px;
+  max-width: 500px;
   height: 100%;
   background-color: ${(props) => props.theme.cBlue};
   object-fit: contain;
   &:nth-child(2) {
     width: 60%;
-    max-width: 500px;
+    max-width: 600px;
     height: 100%;
-    margin-top: 5vw;
     margin-bottom: 5vw;
   }
 `;
@@ -129,13 +128,11 @@ const DayTitle = styled.div`
   width: 100%;
   height: 100%;
   max-width: 150px;
-  color: #007bec;
+  color: white;
   font-weight: 900;
-  background-color: white;
   border-radius: 20px;
   border: solid 1.5px #ffffff;
-  background-color: #ffffff;
-  padding: 10px;
+  padding: 10px 0px;
   text-align: center;
 `;
 const DayContent = styled.div`
@@ -153,33 +150,35 @@ const PriceContainer = styled.div`
 
 const PriceColumn = styled.div`
   ${(props) => props.theme.setMediaQuery(1)};
+  font-weight: bold;
   display: flex;
   align-items: center;
   margin-right: 5px;
   &:nth-child(1) {
     text-decoration: line-through;
-    ${(props) => props.theme.setMediaQuery(3)};
+    font-weight: lighter;
+    ${(props) => props.theme.setMediaQuery(5)};
   }
 `;
 
-// const RegisterButton = styled.button`
-//   margin-top: 44.5px;
-//   width: 100px;
-//   padding: 20px 0px;
-//   border-radius: 40px;
-//   background-color: #ffffff;
-//   ${(props) => props.theme.setMediaQuery(4)};
-//   font-weight: 900;
-//   color: #007bec;
-//   margin-bottom: 60px;
-//   position: fixed;
-//   z-index: 100;
-//   left: 30px;
-//   bottom: -35px;
-//   cursor: pointer;
-//   border: none;
-//   box-shadow: rgba(0, 0, 0, 0.12) 0px 3px 12px 0px !important;
-// `;
+const RegisterButton = styled.button`
+  margin-top: 44.5px;
+  width: 100px;
+  padding: 20px 0px;
+  border-radius: 40px;
+  background-color: #ffffff;
+  ${(props) => props.theme.setMediaQuery(6)};
+  font-weight: bold;
+  color: #007bec;
+  margin-bottom: 60px;
+  position: fixed;
+  z-index: 100;
+  left: 30px;
+  bottom: -5vh;
+  cursor: pointer;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 3px 12px 0px !important;
+`;
 
 const HeaderJombo = () => (
   <Container>
@@ -198,6 +197,7 @@ const HeaderJombo = () => (
       </WreathColumn>
     </WreathContainer>
     <TitleContainer>
+      <ExtendedSmallTitle>12주 만에 iOS 앱을 출시할 수 있는</ExtendedSmallTitle>
       <MainTitle>
         <CodershighLogo src={require('../../Assets/Images/codershigh.png')} />
         <CodershighLogo src={require('../../Assets/Images/maintitle.png')} />
@@ -239,11 +239,10 @@ const HeaderJombo = () => (
     </DayContainer>
     <ExtendedSmallTitle>출시 기념 오프닝 특가</ExtendedSmallTitle>
     <PriceContainer>
-      <PriceColumn>550,000</PriceColumn>
-      <PriceColumn>489,000</PriceColumn>
+      <PriceColumn>550,000원</PriceColumn>
+      <PriceColumn>489,000원</PriceColumn>
     </PriceContainer>
-
-    {/* 네이버 스마트 스토어? -> 등록하기 floating 되면 어떨가? 채팅 상담 옆에 등록하기가 떠 있는 것으로 */}
+    <RegisterButton>등록하기</RegisterButton>
   </Container>
 );
 export default HeaderJombo;

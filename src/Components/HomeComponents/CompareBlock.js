@@ -37,13 +37,20 @@ const BoxContainer = styled.div`
 `;
 const BoxColumn = styled.div`
   width: 100%;
-  font-size: 100px;
   display: column;
   justify-content: center;
   align-items: center;
   color: black;
   &:nth-child(2) {
-    margin-top: 60px;
+    @media (max-width: 768px) {
+      margin-top: 8vh;
+    }
+    @media all and (min-width: 768px) and (max-width: 1024px) {
+      margin-top: 9vh;
+    }
+    @media (min-width: 1024px) {
+      margin-top: 10vh;
+    }
   }
   &:nth-child(3) {
     color: #007bec;
@@ -59,23 +66,21 @@ const BoxTitle = styled.div`
 `;
 const BoxDescription = styled.div`
   margin-top: 20px;
-  background-color: #d1d1d1;
   padding: 22px 7px;
   color: black;
-  font-size: 15px;
+  ${(props) => props.theme.setMediaQuery(5)};
   border-radius: 5px;
-  box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.5);
-  line-height: 15px;
+  border: 2px solid black;
 `;
 
 const BlueBoxDescription = styled(BoxDescription)`
-  background-color: ${(props) => props.theme.cBlue};
-  color: white;
+  color: ${(props) => props.theme.cBlue};
+  border: 2px solid ${(props) => props.theme.cBlue};
 `;
 
 const BoxCenter = styled.div`
   margin-top: 20px;
-  font-size: 15px;
+  ${(props) => props.theme.setMediaQuery(5)};
   color: black;
   padding: 22px 7px;
   display: flex;
@@ -133,6 +138,12 @@ const B = (props) => (
   <span style={{ fontWeight: 'bold' }}>{props.children}</span>
 );
 
+const Description = styled.div`
+  width: 100%;
+  ${(props) => props.theme.setMediaQuery(6)};
+  color: #6f6f6f;
+`;
+
 const CompareBlock = () => (
   <Container>
     <CourseHeader>코더스하이 교육비 비교</CourseHeader>
@@ -169,13 +180,21 @@ const CompareBlock = () => (
           </B>
         </BoxTitle>
         <BlueBoxDescription>12주</BlueBoxDescription>
-        <BlueBoxDescription>489,00원</BlueBoxDescription>
+        <BlueBoxDescription>489,000원</BlueBoxDescription>
         <BlueBoxDescription>0원</BlueBoxDescription>
         <BlueBoxDescription>
           <B>489,000원</B>
         </BlueBoxDescription>
       </BoxColumn>
     </BoxContainer>
+    <Description>
+      *교육비에는 코더스하이의 온라인 동영상 강좌와 학습용 애플리케이션, 과제와
+      토론을 위한 LMS 사용료, <br />
+      수강생 관리 시스템과 수료증 발행비용이 포함되어 있습니다. 수강생의 앱
+      스토어 등록 비용을 덜어드리기 <br />
+      위해 코더스하이 계정에 무료 앱으로 등록하며, 수료 후 수강생이 원하는
+      계정으로 앱을 전송해드립니다.
+    </Description>
     {/* <RegisterButton>
       <B>등록하러 가기</B>
     </RegisterButton> */}

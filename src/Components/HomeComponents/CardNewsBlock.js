@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -11,9 +11,11 @@ const Container = styled.div`
 `;
 
 const CardNewsDescription = styled.div`
-  ${(props) => props.theme.setMediaQuery(2)};
-  &:last-child {
-    font-weight: 600;
+  &:first-child {
+    ${(props) => props.theme.setMediaQuery(3)};
+  }
+  &:nth-child(2) {
+    ${(props) => props.theme.setMediaQuery(2)};
   }
 `;
 
@@ -100,10 +102,14 @@ const CarNewsbtn = styled.button`
 `;
 
 const YoutubeIframe = styled.iframe`
-  margin-bottom: 20px;
   box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.5);
-  @media (max-width: 1024px) {
+  @media (min-width: 768px) {
     width: 280px;
+    height: 155px;
+  }
+  @media all and (min-width: 768px) and (max-width: 1024px) {
+    width: 420px;
+    height: 236px;
   }
   @media (min-width: 1024px) {
     width: 560px;
@@ -111,104 +117,133 @@ const YoutubeIframe = styled.iframe`
   }
 `;
 
-const CardNewsBlock = () => (
-  <Container>
-    <CardNewsDescription>앱 출시가 진짜 되냐고요?</CardNewsDescription>
-    <CardNewsDescription>이미 많은 수강생들이 해냈습니다</CardNewsDescription>
-    <CardNewsTitle>수강생들의 100% 리얼 후기</CardNewsTitle>
-    <CardNewsContainer>
-      <CardNewsBlockDefault>
-        <BlockCardNews>
-          <CardNewsImg
-            src={require('../../Assets/Block_Images/cardNews/news1.jpg')}
-          ></CardNewsImg>
-          <BlockCardNewsInfo>
-            <CardNewsColumn>
-              <CardNewsInfo>앱 출시!?</CardNewsInfo>
-            </CardNewsColumn>
-            <CardNewsColumn>
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://www.facebook.com/codershighteam/posts/1228818117320856"
-              >
-                <CarNewsbtn>살펴보기</CarNewsbtn>
-              </a>
-            </CardNewsColumn>
-          </BlockCardNewsInfo>
-        </BlockCardNews>
-      </CardNewsBlockDefault>
-      <CardNewsBlockDefault>
-        <BlockCardNews>
-          <CardNewsImg
-            src={require('../../Assets/Block_Images/cardNews/news2.jpg')}
-          ></CardNewsImg>
-          <BlockCardNewsInfo>
-            <CardNewsColumn>
-              <CardNewsInfo>문과생들이 앱?</CardNewsInfo>
-            </CardNewsColumn>
-            <CardNewsColumn>
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://www.facebook.com/codershighteam/posts/1237510246451643"
-              >
-                <CarNewsbtn>살펴보기</CarNewsbtn>
-              </a>
-            </CardNewsColumn>
-          </BlockCardNewsInfo>
-        </BlockCardNews>
-      </CardNewsBlockDefault>
-      <CardNewsBlockDefault>
-        <BlockCardNews>
-          <CardNewsImg
-            src={require('../../Assets/Block_Images/cardNews/news3.jpg')}
-          ></CardNewsImg>
-          <BlockCardNewsInfo>
-            <CardNewsColumn>
-              <CardNewsInfo>삼성전자 취업!</CardNewsInfo>
-            </CardNewsColumn>
-            <CardNewsColumn>
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://www.facebook.com/codershighteam/posts/1249197898616211"
-              >
-                <CarNewsbtn>살펴보기</CarNewsbtn>
-              </a>
-            </CardNewsColumn>
-          </BlockCardNewsInfo>
-        </BlockCardNews>
-      </CardNewsBlockDefault>
-      <CardNewsBlockDefault>
-        <BlockCardNews>
-          <CardNewsImg
-            src={require('../../Assets/Block_Images/cardNews/news4.jpg')}
-          ></CardNewsImg>
-          <BlockCardNewsInfo>
-            <CardNewsColumn>
-              <CardNewsInfo>카카오에?</CardNewsInfo>
-            </CardNewsColumn>
-            <CardNewsColumn>
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://www.facebook.com/codershighteam/posts/1271911513011516/"
-              >
-                <CarNewsbtn>살펴보기</CarNewsbtn>
-              </a>
-            </CardNewsColumn>
-          </BlockCardNewsInfo>
-        </BlockCardNews>
-      </CardNewsBlockDefault>
-    </CardNewsContainer>
-    <YoutubeIframe
-      src="https://www.youtube.com/embed/gox3EoRYmXw?start=160"
-      frameBorder="0"
-      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      allowFullScreen
-    ></YoutubeIframe>
-  </Container>
-);
+const YoutubeThumbnail = styled.div`
+  background-image: url(${(props) => props.bgUrl});
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.5);
+  @media (max-width: 768px) {
+    width: 280px;
+    height: 155px;
+  }
+  @media all and (min-width: 768px) and (max-width: 1024px) {
+    width: 420px;
+    height: 236px;
+  }
+  @media (min-width: 1024px) {
+    width: 560px;
+    height: 315px;
+  }
+`;
+
+const CardNewsBlock = () => {
+  const [show, setShow] = useState(false);
+  return (
+    <Container>
+      <CardNewsDescription>앱 출시가 진짜 되냐고요?</CardNewsDescription>
+      <CardNewsDescription>이미 많은 수강생들이 해냈습니다</CardNewsDescription>
+      <CardNewsTitle>수강생들의 100% 리얼 후기</CardNewsTitle>
+      <CardNewsContainer>
+        <CardNewsBlockDefault>
+          <BlockCardNews>
+            <CardNewsImg
+              src={require('../../Assets/Block_Images/cardNews/news1.jpg')}
+            ></CardNewsImg>
+            <BlockCardNewsInfo>
+              <CardNewsColumn>
+                <CardNewsInfo>앱 출시!?</CardNewsInfo>
+              </CardNewsColumn>
+              <CardNewsColumn>
+                <a
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  href="https://www.facebook.com/codershighteam/posts/1228818117320856"
+                >
+                  <CarNewsbtn>살펴보기</CarNewsbtn>
+                </a>
+              </CardNewsColumn>
+            </BlockCardNewsInfo>
+          </BlockCardNews>
+        </CardNewsBlockDefault>
+        <CardNewsBlockDefault>
+          <BlockCardNews>
+            <CardNewsImg
+              src={require('../../Assets/Block_Images/cardNews/news2.jpg')}
+            ></CardNewsImg>
+            <BlockCardNewsInfo>
+              <CardNewsColumn>
+                <CardNewsInfo>문과생들이 앱?</CardNewsInfo>
+              </CardNewsColumn>
+              <CardNewsColumn>
+                <a
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  href="https://www.facebook.com/codershighteam/posts/1237510246451643"
+                >
+                  <CarNewsbtn>살펴보기</CarNewsbtn>
+                </a>
+              </CardNewsColumn>
+            </BlockCardNewsInfo>
+          </BlockCardNews>
+        </CardNewsBlockDefault>
+        <CardNewsBlockDefault>
+          <BlockCardNews>
+            <CardNewsImg
+              src={require('../../Assets/Block_Images/cardNews/news3.jpg')}
+            ></CardNewsImg>
+            <BlockCardNewsInfo>
+              <CardNewsColumn>
+                <CardNewsInfo>삼성전자 취업!</CardNewsInfo>
+              </CardNewsColumn>
+              <CardNewsColumn>
+                <a
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  href="https://www.facebook.com/codershighteam/posts/1249197898616211"
+                >
+                  <CarNewsbtn>살펴보기</CarNewsbtn>
+                </a>
+              </CardNewsColumn>
+            </BlockCardNewsInfo>
+          </BlockCardNews>
+        </CardNewsBlockDefault>
+        <CardNewsBlockDefault>
+          <BlockCardNews>
+            <CardNewsImg
+              src={require('../../Assets/Block_Images/cardNews/news4.jpg')}
+            ></CardNewsImg>
+            <BlockCardNewsInfo>
+              <CardNewsColumn>
+                <CardNewsInfo>카카오에?</CardNewsInfo>
+              </CardNewsColumn>
+              <CardNewsColumn>
+                <a
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  href="https://www.facebook.com/codershighteam/posts/1271911513011516/"
+                >
+                  <CarNewsbtn>살펴보기</CarNewsbtn>
+                </a>
+              </CardNewsColumn>
+            </BlockCardNewsInfo>
+          </BlockCardNews>
+        </CardNewsBlockDefault>
+      </CardNewsContainer>
+      <YoutubeThumbnail
+        onClick={() => setShow(!show)}
+        bgUrl={require('../../Assets/Images/humanBg.jpg')}
+      >
+        {show && (
+          <YoutubeIframe
+            src="https://www.youtube.com/embed/gox3EoRYmXw?start=160?autoplay=1&mute=1"
+            frameBorder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></YoutubeIframe>
+        )}
+      </YoutubeThumbnail>
+    </Container>
+  );
+};
 
 export default CardNewsBlock;

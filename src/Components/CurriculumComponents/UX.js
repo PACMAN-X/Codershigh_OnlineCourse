@@ -97,22 +97,32 @@ const CurriculumWeekDetailTitle = styled.div`
   font-weight: bold;
   margin-bottom: 20px;
 `;
+const CurriculumWeekDetailDescriptionContainer = styled.div``;
+
 const CurriculumWeekDetailDescription = styled.div`
+  padding-left: 30px;
   ${(props) => props.theme.setMediaQuery(6)};
   margin-top: 10px;
 `;
 
 const CurriculumWeekDetailDescriptionNecessary = styled.div`
+  padding-left: 30px;
   ${(props) => props.theme.setMediaQuery(6)};
   font-weight: bold;
   margin-top: 10px;
 `;
 
 const CurriculumWeekDetailDescriptionHIG = styled.div`
+  padding-left: 20px;
   ${(props) => props.theme.setMediaQuery(6)};
   color: #007bec;
   margin-top: 30px;
   font-weight: bold;
+`;
+
+const CurriculumWeekDetailDescriptionAssignment = styled.div`
+  ${(props) => props.theme.setMediaQuery(6)};
+  padding-left: 30px;
 `;
 
 const DirectLink = styled.a`
@@ -121,6 +131,12 @@ const DirectLink = styled.a`
       return props.theme.linked;
     }
   }}
+`;
+
+const DetailIcon = styled.img`
+  width: 20px;
+  height: 20px;
+  display: inline-block;
 `;
 
 const UX = ({ coursesDetailUX }) => {
@@ -199,9 +215,14 @@ const UX = ({ coursesDetailUX }) => {
       <CurriculumWeekDetailContainer>
         <CurriculumWeekDetailContent>
           <CurriculumWeekDetailTitle>
+            <DetailIcon src={require('../../Assets/Images/ux2.jpg')} />
             {coursesDetailUX[showCase].Title}
           </CurriculumWeekDetailTitle>
-          <CurriculumWeekDetailDescription>
+          <CurriculumWeekDetailDescriptionContainer>
+            <CurriculumWeekDetailTitle>
+              <DetailIcon src={require('../../Assets/Images/ux2.jpg')} />
+              학습 영상
+            </CurriculumWeekDetailTitle>
             {coursesDetailUX[showCase].Descriptions.map(
               (description, index) => {
                 var DescriptionBlock;
@@ -245,7 +266,22 @@ const UX = ({ coursesDetailUX }) => {
                 return DescriptionBlock;
               }
             )}
-          </CurriculumWeekDetailDescription>
+          </CurriculumWeekDetailDescriptionContainer>
+          <CurriculumWeekDetailDescriptionContainer>
+            <CurriculumWeekDetailTitle>
+              <DetailIcon src={require('../../Assets/Images/ux2.jpg')} />
+              과제
+            </CurriculumWeekDetailTitle>
+            {coursesDetailUX[showCase].Assignments.map((item, index) => {
+              return (
+                <CurriculumWeekDetailDescriptionAssignment
+                  key={showCase + index + item}
+                >
+                  {item}
+                </CurriculumWeekDetailDescriptionAssignment>
+              );
+            })}
+          </CurriculumWeekDetailDescriptionContainer>
         </CurriculumWeekDetailContent>
       </CurriculumWeekDetailContainer>
       <DirectLink onClick={topFunction}>맨 위로</DirectLink>

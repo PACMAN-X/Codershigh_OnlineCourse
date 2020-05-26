@@ -4,7 +4,7 @@ import CurriculumPresenter from './CurriculumPresenter';
 const CurriculumContainer = () => {
   const coursesDetailUX = [
     {
-      Title: '1주차 :: 오리엔테이션, 학습 환경, 과제 제공',
+      Title: '오리엔테이션, 학습 환경, 과제 제공',
       Descriptions: [
         '[필수] 스큐어모피즘과 플랫디자인',
         '[필수] ADS, 페르소나, 멘탈모델',
@@ -26,7 +26,7 @@ const CurriculumContainer = () => {
         '[선택] 내 앱은 왜 리젝될까?': 'https://youtu.be/vH-W6dN1ZOs',
         '[선택] 앱이 빨라지는 마술': 'https://youtu.be/QEX4DNVT2SQ',
         '[선택] 앱스토어 사례': 'https://youtu.be/V60KmDRAt_U',
-        'iOS HIG 수업 1회차 :: iOS란?':'',
+        'iOS HIG 수업 1회차 :: iOS란?': '',
         '[필수] 1. 오리엔테이션': 'https://youtu.be/A79TQAlYxEw',
         '[필수] 2. iOS 디자인 테마': 'https://youtu.be/A79TQAlYxEw',
         '[선택] 3. Mac Catalyst 시작하기': 'https://youtu.be/MdmSdJCIm60',
@@ -34,10 +34,11 @@ const CurriculumContainer = () => {
         '[선택] 5. Mac Catalyst - Structure': 'https://youtu.be/ASpv8HI41Uo',
         '[선택] 6. Mac Catalyst - Menu': 'https://youtu.be/My1r298RvT4',
         '[필수] 7. Interface Essentials': 'https://youtu.be/_a7ZuveIX8k'
-      }
+      },
+      Assignments: ['과제1', '과제2', '과제3', '과제4', '과제5']
     },
     {
-      Title: '2주차 :: 목업 스케치 안내',
+      Title: '목업 스케치 안내',
       Descriptions: [
         '프로토타입 1',
         '프로토타입 2',
@@ -57,8 +58,8 @@ const CurriculumContainer = () => {
       URLs: {
         '프로토타입 1': 'https://youtu.be/d-gWLNDMhr8',
         '프로토타입 2': 'https://youtu.be/gLSZBBgxFqc',
-        'Multitasking': 'https://programmers.co.kr/learn/courses/4/lessons/213',
-        'Sandbox': 'https://programmers.co.kr/learn/courses/4/lessons/214',
+        Multitasking: 'https://programmers.co.kr/learn/courses/4/lessons/213',
+        Sandbox: 'https://programmers.co.kr/learn/courses/4/lessons/214',
         'iOS HIG 수업 2회차 :: App Architecture': '',
         '[필수]01 Launching': 'https://youtu.be/UV9uKwX8tII',
         '[필수]02 Launching': 'https://youtu.be/VXRhV8va4no',
@@ -69,10 +70,11 @@ const CurriculumContainer = () => {
         '[필수]07 Navigation': 'https://youtu.be/Z4rEetCjjgs',
         '[선택]08 RequestingPermission': 'https://youtu.be/Deelp-vDhSM',
         '[선택]09 Settings1': 'https://youtu.be/7ds-YVCGJxU'
-      }
+      },
+      Assignments: ['과제1', '과제2', '과제3', '과제4', '과제5']
     },
     {
-      Title: '3주차 :: 프로토타입 제작 및 안내',
+      Title: '프로토타입 제작 및 안내',
       Descriptions: [
         'iOS HIG 수업 3회차 :: User Interface',
         '[선택]01 3D Touch',
@@ -125,7 +127,7 @@ const CurriculumContainer = () => {
       }
     },
     {
-      Title: '4주차 :: 발표 및 피드백',
+      Title: '발표 및 피드백',
       Descriptions: [
         'iOS HIG 수업 5회차 :: User Interface - 3',
         '01 Gestures 아이폰 아이패드의 제스처 총 정리. 텍스트 위에서 세 손가락을 모으면? 세 손가락을 펼치면?!',
@@ -186,7 +188,7 @@ const CurriculumContainer = () => {
 
   const coursesDetailAPP = [
     {
-      Title: '1주차 :: 프로토타입 발표 및 팀 빌딩 (1)',
+      Title: '프로토타입 발표 및 팀 빌딩 (1)',
       Descriptions: [
         'Intro App Dev',
         '001 Playground Basics 10:39',
@@ -211,7 +213,7 @@ const CurriculumContainer = () => {
       URLs: {}
     },
     {
-      Title: '2주차 :: 프로토타입 발표 및 팀 빌딩 (2)',
+      Title: '프로토타입 발표 및 팀 빌딩 (2)',
       Descriptions: [
         'Intro App Dev',
         '012 Instances, Methods, and Properties 15:35',
@@ -228,7 +230,7 @@ const CurriculumContainer = () => {
       URLs: {}
     },
     {
-      Title: '3주차 :: 테이블뷰 완전 정복',
+      Title: '테이블뷰 완전 정복',
       Descriptions: [
         'Getting Started with App Development',
         '1.1 Introduction to Swift and Playgrounds',
@@ -264,7 +266,7 @@ const CurriculumContainer = () => {
       }
     },
     {
-      Title: '4주차 :: 프로토타입 발표 및 팀 빌딩 (1)',
+      Title: '프로토타입 발표 및 팀 빌딩 (1)',
       Descriptions: [
         'Getting Started with App Development',
         '1.1 Introduction to Swift and Playgrounds',

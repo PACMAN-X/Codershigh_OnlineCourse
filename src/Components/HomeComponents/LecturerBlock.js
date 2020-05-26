@@ -17,19 +17,6 @@ const Container = styled.div`
   }
 `;
 
-const CourseHeader = styled.div`
-  width: 300px;
-  height: 50px;
-  color: black;
-  ${(props) => props.theme.setMediaQuery(4)};
-  border: 1px solid black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 100px;
-  margin-top: 20px;
-`;
-
 const MainTitle = styled.div`
   ${(props) => props.theme.setMediaQuery(1)};
   margin-top: 48px;
@@ -114,7 +101,6 @@ const LecturerBlock = ({ universities }) => {
 
   return (
     <Container>
-      <CourseHeader>코더스하이의 강점</CourseHeader>
       <MainTitle>
         애플이 선정하고
         <br />
@@ -129,8 +115,8 @@ const LecturerBlock = ({ universities }) => {
         <br /> 선택한 앱 개발 특강입니다
       </Description>
       {/* <IntroductionTutor>
-      <IntroTitle>코더스하이 튜터를 소개합니다</IntroTitle>
-    </IntroductionTutor> */}
+        <IntroTitle>코더스하이 튜터를 소개합니다</IntroTitle>
+      </IntroductionTutor> */}
       <IntroTitle>
         이미 많은 대학들이 <br />
         코더스하이와 함께 했습니다

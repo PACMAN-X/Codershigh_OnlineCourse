@@ -16,8 +16,9 @@ const CourseHeader = styled.div`
   width: 300px;
   height: 50px;
   color: black;
+  font-weight: bold;
   ${(props) => props.theme.setMediaQuery(4)};
-  border: 1px solid black;
+  border: 2px solid black;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -34,7 +35,7 @@ const MainTitle = styled.div`
 `;
 
 const UniversityDetailButton = styled.button`
-  ${(props) => props.theme.setMediaQuery(3)};
+  ${(props) => props.theme.setMediaQuery(5)};
   margin: 20px;
   text-decoration: underline;
   padding: 0;
@@ -80,7 +81,7 @@ const ImageDescription = styled.div`
 `;
 
 const ApcspBlock = () => {
-  const [showCase, setShowCase] = useState(true);
+  const [showCase, setShowCase] = useState(false);
 
   return (
     <Container>

@@ -10,28 +10,39 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   background-image: url(${(props) => props.bgUrl});
-  background-size: cover;
   background-repeat: no-repeat;
   padding: ${(props) => props.theme.padding};
+  @media (max-width: 768px) {
+    background-size: cover;
+  }
+  @media all and (min-width: 768px) and (max-width: 1024px) {
+    background-size: contain;
+    background-size: 100%;
+  }
+  @media (min-width: 1024px) {
+    background-size: contain;
+    background-size: 100%;
+  }
 `;
 
 const CourseHeader = styled.div`
   width: 300px;
   height: 100%;
   color: black;
+  font-weight: bold;
   ${(props) => props.theme.setMediaQuery(4)};
-  border: 1px solid white;
+  border: 2px solid white;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 40px;
   color: white;
-  padding: 10px;
+  padding: 5px;
 `;
 
 const MainTitle = styled.div`
-  ${(props) => props.theme.setMediaQuery(1)};
-  margin-top: 40px;
+  ${(props) => props.theme.setMediaQuery(2)};
+  margin-top: 20vw;
   text-align: center;
   color: black;
   font-weight: bold;

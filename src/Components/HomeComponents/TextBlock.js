@@ -29,12 +29,12 @@ const DescriptionB = styled.div`
 `;
 
 const Description = styled.div`
-  font-size: 20px;
+  ${(props) => props.theme.setMediaQuery(2)};
   text-align: center;
   line-height: 25px;
   color: black;
   &:nth-child(2) {
-    font-size: 15px;
+    ${(props) => props.theme.setMediaQuery(3)};
     margin-top: 15px;
   }
 `;
@@ -61,6 +61,9 @@ const ImageContent = styled.img`
 
 const HalfBackground = styled.span`
   background: linear-gradient(to top, #ff541c 70%, transparent 50%);
+  &:nth-child(1) {
+    background: linear-gradient(to top, #47dbd9 50%, transparent 50%);
+  }
 `;
 
 const ImageDescription = styled.div`
@@ -88,7 +91,7 @@ const TextBlock = () => {
       <Container>
         <DescriptionB>
           코더스하이는 수강생과 함께 성장합니다. <br />
-          단지 채용 정보를 공유하는 것 뿐만 아니라 <br />
+          채용 정보를 공유하는 것 뿐만 아니라 <br />
           개발 관련 업무를 경험하고자 하는 학생들에게 <br />
           <HalfBackground>업무 체험 기회를 적극적으로 제공</HalfBackground>하고
           있습니다.
@@ -104,7 +107,10 @@ const TextBlock = () => {
           <br />
         </Description>
         <Description>
-          <B>무료로 제공되는 ‘코딩 배우기’를 수강해보며 </B>
+          <B>
+            <HalfBackground>무료</HalfBackground>로 제공되는 ‘코딩 배우기’를
+            수강해보며{' '}
+          </B>
           <br />
           개발자로서의 적성을 판단하고 기초를 쌓아보세요.
         </Description>
