@@ -95,7 +95,7 @@ const CurriculumWeekDetailTitle = styled.div`
   ${(props) => props.theme.setMediaQuery(4)};
   color: #007bec;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin: 10px;
 `;
 const CurriculumWeekDetailDescriptionContainer = styled.div``;
 
@@ -113,10 +113,10 @@ const CurriculumWeekDetailDescriptionNecessary = styled.div`
 `;
 
 const CurriculumWeekDetailDescriptionHIG = styled.div`
-  padding-left: 20px;
+  padding-left: 30px;
   ${(props) => props.theme.setMediaQuery(6)};
   color: #007bec;
-  margin-top: 30px;
+  margin-top: 10px;
   font-weight: bold;
 `;
 

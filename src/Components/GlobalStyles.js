@@ -18,6 +18,7 @@ const globalStyles = createGlobalStyle`
         html, body {
             margin: auto;
             width: 100%;
+            height: 100%;
             min-width: 375px;
         }
     }
@@ -34,6 +35,7 @@ const globalStyles = createGlobalStyle`
         color: white;
         font-size: 12px;
     }
+    
 `;
 
 export default globalStyles;

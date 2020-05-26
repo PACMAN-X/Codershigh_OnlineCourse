@@ -124,7 +124,8 @@ const CurriculumContainer = () => {
           'https://youtu.be/H-p_vfQaZ6s',
         '[필수]08 FileHandling iOS가 파일을 다루는 방식':
           'https://youtu.be/w2KJ_kwniUI'
-      }
+      },
+      Assignments: ['과제1', '과제2', '과제3', '과제4', '과제5']
     },
     {
       Title: '발표 및 피드백',
@@ -182,7 +183,8 @@ const CurriculumContainer = () => {
         '07 AR 문제 해결하기': 'https://youtu.be/g81R4D2k3l8',
         '08 AR Glyph - ARKit 을 위한 증강현실 심볼로고와 배지 사용법을 알아봅시다':
           'https://youtu.be/kfThAxLfdfg'
-      }
+      },
+      Assignments: ['과제1', '과제2', '과제3', '과제4', '과제5']
     }
   ];
 
@@ -210,7 +212,8 @@ const CurriculumContainer = () => {
         '5. https://youtu.be/KQSqc91tfc4',
         '6. https://youtu.be/m_7XZ5otc2E'
       ],
-      URLs: {}
+      URLs: {},
+      Assignments: ['과제1', '과제2', '과제3', '과제4', '과제5']
     },
     {
       Title: '프로토타입 발표 및 팀 빌딩 (2)',
@@ -227,7 +230,8 @@ const CurriculumContainer = () => {
         '020 Final Project 21:21 ',
         '021 App Design 19:27'
       ],
-      URLs: {}
+      URLs: {},
+      Assignments: ['과제1', '과제2', '과제3', '과제4', '과제5']
     },
     {
       Title: '테이블뷰 완전 정복',
@@ -263,7 +267,8 @@ const CurriculumContainer = () => {
           'https://www.inflearn.com/course/temp_324841',
         '1.1 Introduction to Swift and Playgrounds':
           'https://www.inflearn.com/course/temp_324841/lecture/35332'
-      }
+      },
+      Assignments: ['과제1', '과제2', '과제3', '과제4', '과제5']
     },
     {
       Title: '프로토타입 발표 및 팀 빌딩 (1)',
@@ -296,23 +301,28 @@ const CurriculumContainer = () => {
       URLs: {
         'Getting Started with App Development':
           'https://www.inflearn.com/course/temp_324841'
-      }
+      },
+      Assignments: ['과제1', '과제2', '과제3', '과제4', '과제5']
     },
     {
       Title: '',
-      Descriptions: ['ComingSoon']
+      Descriptions: ['ComingSoon'],
+      Assignments: ['과제1', '과제2', '과제3', '과제4', '과제5']
     },
     {
       Title: '',
-      Descriptions: ['ComingSoon']
+      Descriptions: ['ComingSoon'],
+      Assignments: ['과제1', '과제2', '과제3', '과제4', '과제5']
     },
     {
       Title: '',
-      Descriptions: ['ComingSoon']
+      Descriptions: ['ComingSoon'],
+      Assignments: ['과제1', '과제2', '과제3', '과제4', '과제5']
     },
     {
       Title: '',
-      Descriptions: ['ComingSoon']
+      Descriptions: ['ComingSoon'],
+      Assignments: ['과제1', '과제2', '과제3', '과제4', '과제5']
     }
   ];
   return (

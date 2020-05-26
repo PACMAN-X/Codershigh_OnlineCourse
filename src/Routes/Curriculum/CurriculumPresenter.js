@@ -130,7 +130,7 @@ const BoxDescription = styled.div`
 `;
 
 const CurriculumPresenter = ({ coursesDetailUX, coursesDetailAPP }) => {
-  const [showCase, setShowCase] = useState(true);
+  const [showCase, setShowCase] = useState(false);
   return (
     <Container>
       <CurriculumHeader>

@@ -95,9 +95,10 @@ const CurriculumWeekDetailTitle = styled.div`
   ${(props) => props.theme.setMediaQuery(4)};
   color: #007bec;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin: 10px;
 `;
 const CurriculumWeekDetailDescription = styled.div`
+  margin-left: 30px;
   ${(props) => props.theme.setMediaQuery(6)};
   margin-top: 10px;
 `;
@@ -109,6 +110,7 @@ const CurriculumWeekDetailDescriptionNecessary = styled.div`
 `;
 
 const CurriculumWeekDetailDescriptionHIG = styled.div`
+  margin-left: 30px;
   ${(props) => props.theme.setMediaQuery(6)};
   color: #007bec;
   margin-top: 30px;
@@ -124,6 +126,7 @@ const DirectLink = styled.a`
 `;
 
 const YouTubeLink = styled.div`
+  margin-left: 30px;
   margin-top: 10px;
 `;
 
@@ -136,6 +139,19 @@ const ComingSoonText = styled.div`
   justify-content: center;
   align-items: center;
   padding: 100px;
+`;
+
+const CurriculumWeekDetailDescriptionContainer = styled.div``;
+
+const CurriculumWeekDetailDescriptionAssignment = styled.div`
+  ${(props) => props.theme.setMediaQuery(6)};
+  padding-left: 30px;
+`;
+
+const DetailIcon = styled.img`
+  width: 20px;
+  height: 20px;
+  display: inline-block;
 `;
 
 const UX = ({ coursesDetailAPP }) => {
@@ -263,9 +279,14 @@ const UX = ({ coursesDetailAPP }) => {
           {coursesDetailAPP[showCase].Title !== '' ? (
             <>
               <CurriculumWeekDetailTitle>
+                <DetailIcon src={require('../../Assets/Images/ux2.jpg')} />
                 {coursesDetailAPP[showCase].Title}
               </CurriculumWeekDetailTitle>
-              <CurriculumWeekDetailDescription>
+              <CurriculumWeekDetailDescriptionContainer>
+                <CurriculumWeekDetailTitle>
+                  <DetailIcon src={require('../../Assets/Images/ux2.jpg')} />
+                  학습 영상
+                </CurriculumWeekDetailTitle>
                 {coursesDetailAPP[showCase].Descriptions.map(
                   (description, index) => {
                     var DescriptionBlock;
@@ -315,7 +336,22 @@ const UX = ({ coursesDetailAPP }) => {
                     return DescriptionBlock;
                   }
                 )}
-              </CurriculumWeekDetailDescription>
+              </CurriculumWeekDetailDescriptionContainer>
+              <CurriculumWeekDetailDescriptionContainer>
+                <CurriculumWeekDetailTitle>
+                  <DetailIcon src={require('../../Assets/Images/ux2.jpg')} />
+                  과제
+                </CurriculumWeekDetailTitle>
+                {coursesDetailAPP[showCase].Assignments.map((item, index) => {
+                  return (
+                    <CurriculumWeekDetailDescriptionAssignment
+                      key={showCase + index + item}
+                    >
+                      {item}
+                    </CurriculumWeekDetailDescriptionAssignment>
+                  );
+                })}
+              </CurriculumWeekDetailDescriptionContainer>
             </>
           ) : (
             <ComingSoonText>
