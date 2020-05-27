@@ -89,11 +89,11 @@ const DividerW = () => {
         ></ImageContent>
         <YoutubeThumbnail
           onClick={() => setShow(!show)}
-          bgUrl={require('../../Assets/Images/humanBg.jpg')}
+          bgUrl={require('../../Assets/Images/Remote_Thumb.jpg')}
         >
           {show && (
             <YoutubeIframe
-              src="https://www.youtube.com/embed/gox3EoRYmXw?start=893?autoplay=1"
+              src="https://www.youtube.com/embed/gox3EoRYmXw?start=893"
               frameBorder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen

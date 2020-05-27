@@ -40,7 +40,7 @@ const DirectLink = styled.a`
 
 const ImageBgBlock = () => {
   return (
-    <Container bgUrl={require('../../Assets/Images/humanBg.jpg')}>
+    <Container bgUrl={require('../../Assets/Images/glassBG.jpg')}>
       <MainTitle>
         당신의 포트폴리오에
         <br />앱 개발 경험을 추가하세요!

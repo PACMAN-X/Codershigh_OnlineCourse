@@ -231,11 +231,11 @@ const CardNewsBlock = () => {
       </CardNewsContainer>
       <YoutubeThumbnail
         onClick={() => setShow(!show)}
-        bgUrl={require('../../Assets/Images/humanBg.jpg')}
+        bgUrl={require('../../Assets/Images/cardnew_thumb.jpg')}
       >
         {show && (
           <YoutubeIframe
-            src="https://www.youtube.com/embed/gox3EoRYmXw?start=160?autoplay=1&mute=1"
+            src="https://www.youtube.com/embed/gox3EoRYmXw?start=160"
             frameBorder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen

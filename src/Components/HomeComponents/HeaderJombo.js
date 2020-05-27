@@ -81,6 +81,7 @@ const SmallTitle = styled.div`
 const ExtendedSmallTitle = styled(SmallTitle)`
   ${(props) => props.theme.setMediaQuery(3)};
   margin: 5vw 0;
+  margin-bottom: 20px;
   &:nth-child(1) {
     font-weight: bold;
   }
@@ -170,11 +171,10 @@ const RegisterButton = styled.button`
   ${(props) => props.theme.setMediaQuery(6)};
   font-weight: bold;
   color: #007bec;
-  margin-bottom: 60px;
   position: fixed;
   z-index: 100;
   left: 30px;
-  bottom: -5vh;
+  bottom: 1.5vh;
   cursor: pointer;
   border: none;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 3px 12px 0px !important;
