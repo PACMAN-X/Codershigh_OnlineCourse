@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import wreathImage from '../../Assets/Images/wreath.png';
+import RegisterModal from './RegisterModal';
 
 const Container = styled.div`
   width: 100%;
@@ -180,69 +181,93 @@ const RegisterButton = styled.button`
   box-shadow: rgba(0, 0, 0, 0.12) 0px 3px 12px 0px !important;
 `;
 
-const HeaderJombo = () => (
-  <Container>
-    <WreathContainer>
-      <WreathColumn>
-        <WreathTitle>누적 수강생</WreathTitle>
-        <WreathDescription>5,000명 이상</WreathDescription>
-      </WreathColumn>
-      <WreathColumn>
-        <WreathTitle>방학 특강 신청</WreathTitle>
-        <WreathDescription>경쟁률 3:1</WreathDescription>
-      </WreathColumn>
-      <WreathColumn>
-        <WreathTitle>수강생 출시 앱</WreathTitle>
-        <WreathDescription>25건 이상</WreathDescription>
-      </WreathColumn>
-    </WreathContainer>
-    <TitleContainer>
-      <ExtendedSmallTitle>12주 만에 iOS 앱을 출시할 수 있는</ExtendedSmallTitle>
-      <MainTitle>
-        <CodershighLogo src={require('../../Assets/Images/codershigh.png')} />
-        <CodershighLogo src={require('../../Assets/Images/maintitle.png')} />
-      </MainTitle>
-    </TitleContainer>
-    <DayContainer>
-      <DayRow>
-        <DayColumn>
-          <DayTitle>모집 기간</DayTitle>
-        </DayColumn>
-        <DayColumn>
-          <DayContent>5월 2일 ~ 6월 26일</DayContent>
-        </DayColumn>
-      </DayRow>
-      <DayRow>
-        <DayColumn>
-          <DayTitle>수강 기간</DayTitle>
-        </DayColumn>
-        <DayColumn>
-          <DayContent>7월 6일 ~ 9월 25일 (12주)</DayContent>
-        </DayColumn>
-      </DayRow>
-      <DayRow>
-        <DayColumn>
-          <DayTitle>수강 정원</DayTitle>
-        </DayColumn>
-        <DayColumn>
-          <DayContent>30명 (선착순 마감)</DayContent>
-        </DayColumn>
-      </DayRow>
-      <DayRow>
-        <DayColumn>
-          <DayTitle>개강 일시</DayTitle>
-        </DayColumn>
-        <DayColumn>
-          <DayContent>7월 6일 월요일 저녁 7시</DayContent>
-        </DayColumn>
-      </DayRow>
-    </DayContainer>
-    <ExtendedSmallTitle>출시 기념 오프닝 특가</ExtendedSmallTitle>
-    <PriceContainer>
-      <PriceColumn>550,000원</PriceColumn>
-      <PriceColumn>489,000원</PriceColumn>
-    </PriceContainer>
-    <RegisterButton>등록하기</RegisterButton>
-  </Container>
-);
+const ModalBackground = styled.div`
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index:100;
+`;
+
+const HeaderJombo = () => {
+  const [modal, setModal] = useState(false)
+  const toggleModal = (_modal) => {
+    const container = document.getElementById("AppContainer")
+    container.classList.add('is-modal');
+    setModal(_modal)
+  }
+  return ( 
+    <Container>
+      <WreathContainer>
+        <WreathColumn>
+          <WreathTitle>누적 수강생</WreathTitle>
+          <WreathDescription>5,000명 이상</WreathDescription>
+        </WreathColumn>
+        <WreathColumn>
+          <WreathTitle>방학 특강 신청</WreathTitle>
+          <WreathDescription>경쟁률 3:1</WreathDescription>
+        </WreathColumn>
+        <WreathColumn>
+          <WreathTitle>수강생 출시 앱</WreathTitle>
+          <WreathDescription>25건 이상</WreathDescription>
+        </WreathColumn>
+      </WreathContainer>
+      <TitleContainer>
+        <ExtendedSmallTitle>12주 만에 iOS 앱을 출시할 수 있는</ExtendedSmallTitle>
+        <MainTitle>
+          <CodershighLogo src={require('../../Assets/Images/codershigh.png')} />
+          <CodershighLogo src={require('../../Assets/Images/maintitle.png')} />
+        </MainTitle>
+      </TitleContainer>
+      <DayContainer>
+        <DayRow>
+          <DayColumn>
+            <DayTitle>모집 기간</DayTitle>
+          </DayColumn>
+          <DayColumn>
+            <DayContent>5월 2일 ~ 6월 26일</DayContent>
+          </DayColumn>
+        </DayRow>
+        <DayRow>
+          <DayColumn>
+            <DayTitle>수강 기간</DayTitle>
+          </DayColumn>
+          <DayColumn>
+            <DayContent>7월 6일 ~ 9월 25일 (12주)</DayContent>
+          </DayColumn>
+        </DayRow>
+        <DayRow>
+          <DayColumn>
+            <DayTitle>수강 정원</DayTitle>
+          </DayColumn>
+          <DayColumn>
+            <DayContent>30명 (선착순 마감)</DayContent>
+          </DayColumn>
+        </DayRow>
+        <DayRow>
+          <DayColumn>
+            <DayTitle>개강 일시</DayTitle>
+          </DayColumn>
+          <DayColumn>
+            <DayContent>7월 6일 월요일 저녁 7시</DayContent>
+          </DayColumn>
+        </DayRow>
+      </DayContainer>
+      <ExtendedSmallTitle>출시 기념 오프닝 특가</ExtendedSmallTitle>
+      <PriceContainer>
+        <PriceColumn>550,000원</PriceColumn>
+        <PriceColumn>489,000원</PriceColumn>
+      </PriceContainer>
+      <RegisterButton onClick={e => toggleModal(!modal)}>등록하기</RegisterButton>
+      {modal && <ModalBackground>
+        <RegisterModal />
+      </ModalBackground>}
+    </Container>
+  )
+};
 export default HeaderJombo;

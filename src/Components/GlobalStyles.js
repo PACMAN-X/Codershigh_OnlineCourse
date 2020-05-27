@@ -13,6 +13,10 @@ const globalStyles = createGlobalStyle`
         box-sizing:border-box;
     }
 
+    // div.is-modal {
+    //     overflow: hidden;
+    //     position:   fixed;
+    // }
     
     @media (max-width: 1024px) {
         html, body {

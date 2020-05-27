@@ -1,9 +1,0 @@
-{
-    "CSS Setting": {
-		"prefix": "setfont",
-		"body": [
-			"${(props) => props.theme.setMediaQuery()};"
-		],
-		"description": "Generate default font set"
-	}
-}
