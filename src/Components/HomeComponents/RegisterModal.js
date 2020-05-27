@@ -40,7 +40,7 @@ const SubmitButton = styled.button`
   border-radius: 4px;
   background-color: #363636;
   color: white;
-  font-weight: bold;  
+  font-weight: bold;
 `;
 
 const MessageBox = styled.div`
@@ -53,56 +53,61 @@ const RegisterModal = () => {
   const [tel, setTel] = useState('');
 
   const checkValidation = () => {
-    const re =  /\S+@\S+\.\S+/;
+    const re = /\S+@\S+\.\S+/;
     if (!re.test(String(email).toLowerCase())) {
-      alert('이메일을 올바른 형식으로 입력해주세요')
-      return false
+      alert('이메일을 올바른 형식으로 입력해주세요');
+      return false;
     } else if (name.trim() === '') {
-      alert('이름을 입력해주세요')
-      return false
+      alert('이름을 입력해주세요');
+      return false;
     } else if (tel.trim() === '') {
-      alert('전화번호를 입력해주세요')
-      return false
+      alert('전화번호를 입력해주세요');
+      return false;
     } else {
-      return true
+      return true;
     }
-  }
+  };
 
   const requestPay = async () => {
     try {
       const IMP = window.IMP;
       const payment = await IMPRequestPayment(IMP, {
-        pg : 'kakaopay',
-        pay_method : 'card',
-        merchant_uid : 'merchant_' + new Date().getTime(),
-        name : '코더스하이 온라인코스(오픈 특가)',
-        amount : 489000,
-        buyer_email : email,
-        buyer_name : name,
-        buyer_tel : tel,
-      })
-      console.log(payment)
+        pg: 'kakaopay',
+        pay_method: 'card',
+        merchant_uid: 'merchant_' + new Date().getTime(),
+        name: '코더스하이 온라인코스(오픈 특가)',
+        amount: 489000,
+        buyer_email: email,
+        buyer_name: name,
+        buyer_tel: tel
+      });
+      console.log(payment);
       await registerPayment({
         ...payment,
-        name : '코더스하이 온라인코스'
-      })
-      alert('결제가 성공하였습니다.')
+        name: '코더스하이 온라인코스'
+      });
+      alert('결제가 성공하였습니다.');
     } catch (error) {
-      alert(error.message)
+      alert(error.message);
     }
-  }
+  };
   return (
     <InputContainer>
       <MessageBox>
         제품명 : 코더스하이 온라인코스 <br />
-        금  액 :  489,000원<br />
+        금 액 : 489,000원
+        <br />
         지불 방법 : 카카오페이
       </MessageBox>
       <InputRow>
         <ColumnLabel>
           <label>
             이름
-            <Input value={name} onChange={e => setName(e.target.value)} placeholder="이름을 입력해주세요"></Input>
+            <Input
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              placeholder="이름을 입력해주세요"
+            ></Input>
           </label>
         </ColumnLabel>
       </InputRow>
@@ -111,7 +116,11 @@ const RegisterModal = () => {
         <ColumnLabel>
           <label>
             이메일
-            <Input value={email} onChange={e => setEmail(e.target.value)} placeholder="예) example@codershigh.com"></Input>
+            <Input
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="예) example@codershigh.com"
+            ></Input>
           </label>
         </ColumnLabel>
       </InputRow>
@@ -120,16 +129,24 @@ const RegisterModal = () => {
         <ColumnLabel>
           <label>
             전화번호
-            <Input value={tel} onChange={e => setTel(e.target.value)} placeholder="전화번호를 입력하세요"></Input>
+            <Input
+              value={tel}
+              onChange={(e) => setTel(e.target.value)}
+              placeholder="전화번호를 입력하세요"
+            ></Input>
           </label>
         </ColumnLabel>
       </InputRow>
-      <SubmitButton onClick={async (e) => {
-        e.preventDefault();
-        if (checkValidation()) {
-          await requestPay();
-        }
-      }}>결제 하기</SubmitButton>
+      <SubmitButton
+        onClick={async (e) => {
+          e.preventDefault();
+          if (checkValidation()) {
+            await requestPay();
+          }
+        }}
+      >
+        결제 하기
+      </SubmitButton>
     </InputContainer>
   );
 };
