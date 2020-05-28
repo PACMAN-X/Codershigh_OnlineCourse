@@ -12,6 +12,23 @@ const InputContainer = styled.form`
   justify-content: center;
   align-items: center;
   background-color: ${(props) => props.theme.cBlue};
+  z-index: 101;
+  position: relative;
+`;
+
+const CloseBox = styled.div`
+  position: absolute;
+  top: 16px;
+  right: -8px;
+  ${(props) => props.theme.setMediaQuery(1)};
+  color: white;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  cursor: pointer;
+  :hover {
+    opacity: 0.7;
+  }
 `;
 
 const InputRow = styled.div`
@@ -47,7 +64,7 @@ const MessageBox = styled.div`
   ${(props) => props.theme.setMediaQuery(3)};
 `;
 
-const RegisterModal = () => {
+const RegisterModal = ({ onClose }) => {
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
   const [tel, setTel] = useState('');
@@ -93,6 +110,7 @@ const RegisterModal = () => {
   };
   return (
     <InputContainer>
+      <CloseBox onClick={e => onClose()}>X</CloseBox>
       <MessageBox>
         제품명 : 코더스하이 온라인코스 <br />
         금 액 : 489,000원
