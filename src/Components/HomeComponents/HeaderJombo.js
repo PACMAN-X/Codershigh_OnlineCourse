@@ -191,14 +191,12 @@ const ModalBackground = styled.div`
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index:100;
+  z-index: 100;
 `;
 
 const HeaderJombo = () => {
   const [modal, setModal] = useState(false)
   const toggleModal = (_modal) => {
-    const container = document.getElementById("AppContainer")
-    container.classList.add('is-modal');
     setModal(_modal)
   }
   return ( 
@@ -265,7 +263,9 @@ const HeaderJombo = () => {
       </PriceContainer>
       <RegisterButton onClick={e => toggleModal(!modal)}>등록하기</RegisterButton>
       {modal && <ModalBackground>
-        <RegisterModal />
+        <RegisterModal onClose={() => {
+          setModal(false)
+        }} />
       </ModalBackground>}
     </Container>
   )

@@ -20,7 +20,7 @@ import FooterBlock from '../../Components/Footer/FooterBlock';
 const Container = styled.div``;
 
 const HomePresenter = ({ universities }) => (
-  <Container id="AppContainer">
+  <Container>
     <HeaderJombo></HeaderJombo>
     <HeaderDescription></HeaderDescription>
     <DividerB></DividerB>

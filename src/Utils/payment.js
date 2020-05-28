@@ -34,7 +34,7 @@ export function IMPRequestPayment(IMP, params) {
 export async function registerPayment(params) {
   console.log(params);
   axios
-    .post('http://codershigh.dscloud.biz:14000/payment', params)
+    .post('https://codershigh.dscloud.biz:14443/payment', params)
     .then((result) => {
       if (result.status === 200) {
         alert('결제 성공');
@@ -44,5 +44,9 @@ export async function registerPayment(params) {
         window.location.reload();
       }
     })
-    .catch((error) => alert(error.message));
+    .catch((error) => {
+      console.log(error);
+      alert(JSON.stringify(error));
+      window.location.reload();
+    });
 }
