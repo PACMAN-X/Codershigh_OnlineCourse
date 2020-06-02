@@ -96,7 +96,7 @@ export const theme = {
       },
       7: {
         mobile: {
-          size: '8px;'
+          size: '6px;'
         },
         pad: {
           size: '14px;'

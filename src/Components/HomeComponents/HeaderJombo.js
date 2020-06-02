@@ -15,7 +15,7 @@ const Container = styled.div`
 `;
 
 const WreathContainer = styled.div`
-  width: 80%;
+  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: row;
@@ -34,7 +34,7 @@ const WreathColumn = styled.div`
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
-  padding: 6vw;
+  padding: 7vw;
 `;
 
 const WreathTitle = styled.div`
@@ -195,11 +195,11 @@ const ModalBackground = styled.div`
 `;
 
 const HeaderJombo = () => {
-  const [modal, setModal] = useState(false)
+  const [modal, setModal] = useState(false);
   const toggleModal = (_modal) => {
-    setModal(_modal)
-  }
-  return ( 
+    setModal(_modal);
+  };
+  return (
     <Container>
       <WreathContainer>
         <WreathColumn>
@@ -216,7 +216,9 @@ const HeaderJombo = () => {
         </WreathColumn>
       </WreathContainer>
       <TitleContainer>
-        <ExtendedSmallTitle>12주 만에 iOS 앱을 출시할 수 있는</ExtendedSmallTitle>
+        <ExtendedSmallTitle>
+          12주 만에 iOS 앱을 출시할 수 있는
+        </ExtendedSmallTitle>
         <MainTitle>
           <CodershighLogo src={require('../../Assets/Images/codershigh.png')} />
           <CodershighLogo src={require('../../Assets/Images/maintitle.png')} />
@@ -261,13 +263,19 @@ const HeaderJombo = () => {
         <PriceColumn>550,000원</PriceColumn>
         <PriceColumn>489,000원</PriceColumn>
       </PriceContainer>
-      <RegisterButton onClick={e => toggleModal(!modal)}>등록하기</RegisterButton>
-      {modal && <ModalBackground>
-        <RegisterModal onClose={() => {
-          setModal(false)
-        }} />
-      </ModalBackground>}
+      <RegisterButton onClick={(e) => toggleModal(!modal)}>
+        등록하기
+      </RegisterButton>
+      {modal && (
+        <ModalBackground>
+          <RegisterModal
+            onClose={() => {
+              setModal(false);
+            }}
+          />
+        </ModalBackground>
+      )}
     </Container>
-  )
+  );
 };
 export default HeaderJombo;
