@@ -230,7 +230,10 @@ const HeaderJombo = () => {
             <DayTitle>모집 기간</DayTitle>
           </DayColumn>
           <DayColumn>
-            <DayContent>5월 2일 ~ 6월 26일</DayContent>
+            <DayContent>
+              대학의 단체 수강이 진행 예정입니다. 다음 모집은 9월 부터
+              시작합니다.
+            </DayContent>
           </DayColumn>
         </DayRow>
         <DayRow>
@@ -238,7 +241,9 @@ const HeaderJombo = () => {
             <DayTitle>수강 기간</DayTitle>
           </DayColumn>
           <DayColumn>
-            <DayContent>7월 6일 ~ 9월 25일 (12주)</DayContent>
+            <DayContent>
+              12 주간의 원격 실시간 수업 + 앱 스토어 등록까지
+            </DayContent>
           </DayColumn>
         </DayRow>
         <DayRow>
@@ -246,7 +251,7 @@ const HeaderJombo = () => {
             <DayTitle>수강 정원</DayTitle>
           </DayColumn>
           <DayColumn>
-            <DayContent>30명 (선착순 마감)</DayContent>
+            <DayContent>클래스별 30명</DayContent>
           </DayColumn>
         </DayRow>
         <DayRow>
@@ -254,7 +259,7 @@ const HeaderJombo = () => {
             <DayTitle>개강 일시</DayTitle>
           </DayColumn>
           <DayColumn>
-            <DayContent>7월 6일 월요일 저녁 7시</DayContent>
+            <DayContent>상담신청을 통해 안내드립니다.</DayContent>
           </DayColumn>
         </DayRow>
       </DayContainer>
